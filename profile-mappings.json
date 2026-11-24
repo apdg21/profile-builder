@@ -1,0 +1,358 @@
+{
+  "style1": {
+    "scalar": {
+      "fullName": "fullName",
+      "headline": "headline",
+      "tagline": "tagline",
+      "profileImage": "profileImage",
+      "coverImage": "coverImage",
+      "location": "location",
+      "availability": "availability",
+      "businessName": "businessName",
+      "businessUrl": "businessUrl",
+      "ctaText": "ctaText",
+      "ctaUrl": "ctaUrl",
+      "aboutTitle": "aboutTitle",
+      "aboutText": "aboutText",
+      "servicesTitle": "servicesTitle",
+      "servicesIntro": "servicesIntro",
+      "workTitle": "workTitle",
+      "skillsTitle": "skillsTitle",
+      "credentialsTitle": "credentialsTitle",
+      "testimonialsTitle": "testimonialsTitle",
+      "faqTitle": "faqTitle",
+      "contactTitle": "contactTitle",
+      "contactIntro": "contactIntro",
+      "email": "email",
+      "phone": "phone",
+      "messengerUsername": "messengerUsername",
+      "messengerNote": "messengerNote",
+      "bookingUrl": "bookingUrl",
+      "bookingLabel": "bookingLabel",
+      "copyright": "copyright"
+    },
+    "arrays": {
+      "services": {
+        "targetPath": "services",
+        "itemMap": {
+          "title": "title",
+          "description": "description",
+          "price": "price",
+          "link": "link"
+        }
+      },
+      "work": {
+        "targetPath": "work",
+        "itemMap": {
+          "role": "role",
+          "company": "company",
+          "period": "period",
+          "description": "description"
+        }
+      },
+      "skills": {
+        "targetPath": "skills",
+        "itemMap": {
+          "name": "name"
+        }
+      },
+      "credentials": {
+        "targetPath": "credentials",
+        "itemMap": {
+          "title": "title",
+          "issuer": "issuer",
+          "year": "year"
+        }
+      },
+      "testimonials": {
+        "targetPath": "testimonials",
+        "itemMap": {
+          "text": "text",
+          "author": "author",
+          "role": "role"
+        }
+      },
+      "faq": {
+        "targetPath": "faq",
+        "itemMap": {
+          "question": "question",
+          "answer": "answer"
+        }
+      },
+      "socialLinks": {
+        "targetPath": "socialLinks",
+        "itemMap": {
+          "platform": "platform",
+          "url": "url"
+        }
+      }
+    }
+  },
+  "style2": {
+    "scalar": {
+      "fullName": "fullName",
+      "headline": "headline",
+      "tagline": "tagline",
+      "profileImage": "profileImage",
+      "coverImage": "coverImage",
+      "location": "location",
+      "availability": "availability",
+      "businessName": "businessName",
+      "businessUrl": "businessUrl",
+      "ctaText": "ctaText",
+      "ctaUrl": "ctaUrl",
+      "aboutTitle": "aboutTitle",
+      "aboutText": "aboutText",
+      "servicesTitle": "servicesTitle",
+      "servicesIntro": "servicesIntro",
+      "workTitle": "workTitle",
+      "skillsTitle": "skillsTitle",
+      "credentialsTitle": "credentialsTitle",
+      "testimonialsTitle": "testimonialsTitle",
+      "faqTitle": "faqTitle",
+      "contactTitle": "contactTitle",
+      "contactIntro": "contactIntro",
+      "email": "email",
+      "phone": "phone",
+      "messengerUsername": "messengerUsername",
+      "messengerNote": "messengerNote",
+      "bookingUrl": "bookingUrl",
+      "bookingLabel": "bookingLabel",
+      "copyright": "copyright"
+    },
+    "arrays": {
+      "services": {
+        "targetPath": "services",
+        "itemMap": {
+          "title": "title",
+          "description": "description",
+          "price": "price",
+          "link": "link"
+        }
+      },
+      "work": {
+        "targetPath": "work",
+        "itemMap": {
+          "role": "role",
+          "company": "company",
+          "period": "period",
+          "description": "description"
+        }
+      },
+      "skills": {
+        "targetPath": "skills",
+        "itemMap": {
+          "name": "name"
+        }
+      },
+      "credentials": {
+        "targetPath": "credentials",
+        "itemMap": {
+          "title": "title",
+          "issuer": "issuer",
+          "year": "year"
+        }
+      },
+      "testimonials": {
+        "targetPath": "testimonials",
+        "itemMap": {
+          "text": "text",
+          "author": "author",
+          "role": "role"
+        }
+      },
+      "faq": {
+        "targetPath": "faq",
+        "itemMap": {
+          "question": "question",
+          "answer": "answer"
+        }
+      },
+      "socialLinks": {
+        "targetPath": "socialLinks",
+        "itemMap": {
+          "platform": "platform",
+          "url": "url"
+        }
+      }
+    }
+  },
+  "style3": {
+    "scalar": {
+      "fullName": "fullName",
+      "headline": "headline",
+      "tagline": "tagline",
+      "profileImage": "profileImage",
+      "coverImage": "coverImage",
+      "location": "location",
+      "availability": "availability",
+      "businessName": "businessName",
+      "businessUrl": "businessUrl",
+      "ctaText": "ctaText",
+      "ctaUrl": "ctaUrl",
+      "aboutTitle": "aboutTitle",
+      "aboutText": "aboutText",
+      "servicesTitle": "servicesTitle",
+      "servicesIntro": "servicesIntro",
+      "workTitle": "workTitle",
+      "skillsTitle": "skillsTitle",
+      "credentialsTitle": "credentialsTitle",
+      "testimonialsTitle": "testimonialsTitle",
+      "faqTitle": "faqTitle",
+      "contactTitle": "contactTitle",
+      "contactIntro": "contactIntro",
+      "email": "email",
+      "phone": "phone",
+      "messengerUsername": "messengerUsername",
+      "messengerNote": "messengerNote",
+      "bookingUrl": "bookingUrl",
+      "bookingLabel": "bookingLabel",
+      "copyright": "copyright"
+    },
+    "arrays": {
+      "services": {
+        "targetPath": "services",
+        "itemMap": {
+          "title": "title",
+          "description": "description",
+          "price": "price",
+          "link": "link"
+        }
+      },
+      "work": {
+        "targetPath": "work",
+        "itemMap": {
+          "role": "role",
+          "company": "company",
+          "period": "period",
+          "description": "description"
+        }
+      },
+      "skills": {
+        "targetPath": "skills",
+        "itemMap": {
+          "name": "name"
+        }
+      },
+      "credentials": {
+        "targetPath": "credentials",
+        "itemMap": {
+          "title": "title",
+          "issuer": "issuer",
+          "year": "year"
+        }
+      },
+      "testimonials": {
+        "targetPath": "testimonials",
+        "itemMap": {
+          "text": "text",
+          "author": "author",
+          "role": "role"
+        }
+      },
+      "faq": {
+        "targetPath": "faq",
+        "itemMap": {
+          "question": "question",
+          "answer": "answer"
+        }
+      },
+      "socialLinks": {
+        "targetPath": "socialLinks",
+        "itemMap": {
+          "platform": "platform",
+          "url": "url"
+        }
+      }
+    }
+  },
+  "style4": {
+    "scalar": {
+      "fullName": "fullName",
+      "headline": "headline",
+      "tagline": "tagline",
+      "profileImage": "profileImage",
+      "coverImage": "coverImage",
+      "location": "location",
+      "availability": "availability",
+      "businessName": "businessName",
+      "businessUrl": "businessUrl",
+      "ctaText": "ctaText",
+      "ctaUrl": "ctaUrl",
+      "aboutTitle": "aboutTitle",
+      "aboutText": "aboutText",
+      "servicesTitle": "servicesTitle",
+      "servicesIntro": "servicesIntro",
+      "workTitle": "workTitle",
+      "skillsTitle": "skillsTitle",
+      "credentialsTitle": "credentialsTitle",
+      "testimonialsTitle": "testimonialsTitle",
+      "faqTitle": "faqTitle",
+      "contactTitle": "contactTitle",
+      "contactIntro": "contactIntro",
+      "email": "email",
+      "phone": "phone",
+      "messengerUsername": "messengerUsername",
+      "messengerNote": "messengerNote",
+      "bookingUrl": "bookingUrl",
+      "bookingLabel": "bookingLabel",
+      "copyright": "copyright"
+    },
+    "arrays": {
+      "services": {
+        "targetPath": "services",
+        "itemMap": {
+          "title": "title",
+          "description": "description",
+          "price": "price",
+          "link": "link"
+        }
+      },
+      "work": {
+        "targetPath": "work",
+        "itemMap": {
+          "role": "role",
+          "company": "company",
+          "period": "period",
+          "description": "description"
+        }
+      },
+      "skills": {
+        "targetPath": "skills",
+        "itemMap": {
+          "name": "name"
+        }
+      },
+      "credentials": {
+        "targetPath": "credentials",
+        "itemMap": {
+          "title": "title",
+          "issuer": "issuer",
+          "year": "year"
+        }
+      },
+      "testimonials": {
+        "targetPath": "testimonials",
+        "itemMap": {
+          "text": "text",
+          "author": "author",
+          "role": "role"
+        }
+      },
+      "faq": {
+        "targetPath": "faq",
+        "itemMap": {
+          "question": "question",
+          "answer": "answer"
+        }
+      },
+      "socialLinks": {
+        "targetPath": "socialLinks",
+        "itemMap": {
+          "platform": "platform",
+          "url": "url"
+        }
+      }
+    }
+  }
+}

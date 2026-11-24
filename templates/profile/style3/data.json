@@ -1,0 +1,144 @@
+{
+  "fullName": "Kai Santos",
+  "headline": "Content creator & photographer",
+  "tagline": "Travel, food, and the people behind small brands — shot on location in the Philippines.",
+  "profileImage": "assets/profile.jpg",
+  "coverImage": "",
+  "location": "Davao City, Philippines",
+  "availability": "Booking shoots for Feb–Apr",
+  "businessName": "Kai Santos Creative",
+  "businessUrl": "",
+  "ctaText": "Book a shoot",
+  "ctaUrl": "",
+  "aboutTitle": "About",
+  "aboutText": "I make photos and short-form video for travel brands, restaurants, and people who are proud of what they build.\n\nI started posting Davao food walks in 2019. Six years later I split my time between commissioned shoots and my own series about small businesses in Mindanao.\n\nIf you want polished but not plastic, we will get along.",
+  "servicesTitle": "Work with me",
+  "servicesIntro": "Rates are starting points. Tell me the story and we will scope it properly.",
+  "services": [
+    {
+      "title": "Brand shoot",
+      "description": "Half-day photo session: menu, product, team, and space, delivered in a shared gallery.",
+      "price": "from ₱15,000",
+      "link": ""
+    },
+    {
+      "title": "Short-form video",
+      "description": "Three vertical videos edited for Reels, TikTok, and Facebook.",
+      "price": "from ₱20,000",
+      "link": ""
+    },
+    {
+      "title": "Travel feature",
+      "description": "A destination story for tourism boards and hotels, photo and video.",
+      "price": "by project",
+      "link": ""
+    }
+  ],
+  "workTitle": "Selected work",
+  "work": [
+    {
+      "role": "Food series",
+      "company": "Davao Food Walks",
+      "period": "2019 — present",
+      "description": "A self-published series on 80+ small food businesses in Mindanao."
+    },
+    {
+      "role": "Campaign shoot",
+      "company": "Pearl Farm Beach Resort",
+      "period": "2025",
+      "description": "Photo and video for a seasonal campaign, shot over four days."
+    },
+    {
+      "role": "Brand refresh",
+      "company": "Kape Mindanao",
+      "period": "2024",
+      "description": "Packaging photography and a content library for a local roaster."
+    }
+  ],
+  "skillsTitle": "What I shoot",
+  "skills": [
+    {
+      "name": "Food & beverage"
+    },
+    {
+      "name": "Travel"
+    },
+    {
+      "name": "Portrait"
+    },
+    {
+      "name": "Short-form video"
+    },
+    {
+      "name": "Drone"
+    },
+    {
+      "name": "Lightroom"
+    }
+  ],
+  "credentialsTitle": "Recognition",
+  "credentials": [
+    {
+      "title": "Best Travel Feature",
+      "issuer": "Mindanao Media Awards",
+      "year": "2024"
+    },
+    {
+      "title": "Featured Creator",
+      "issuer": "TikTok Philippines",
+      "year": "2023"
+    }
+  ],
+  "testimonialsTitle": "What clients say",
+  "testimonials": [
+    {
+      "text": "Kai made our whole team relax on camera. The photos are still the ones we use everywhere.",
+      "author": "Bea Ong",
+      "role": "Kape Mindanao"
+    },
+    {
+      "text": "Fast, kind, and genuinely creative. Our bookings went up the week the videos went live.",
+      "author": "Marco Diaz",
+      "role": "Pearl Farm Beach Resort"
+    }
+  ],
+  "faqTitle": "Good to know",
+  "faq": [
+    {
+      "question": "Do you travel outside Davao?",
+      "answer": "Yes. Travel is quoted separately, and I waive it for advocacy projects."
+    },
+    {
+      "question": "How do I get the photos?",
+      "answer": "A private online gallery with full-resolution downloads, usually within seven days."
+    }
+  ],
+  "contactTitle": "Let's make something",
+  "contactIntro": "Send me your dates, location, and what you want people to feel when they see it.",
+  "email": "kai@kaisantos.ph",
+  "phone": "+63 917 555 0144",
+  "messengerUsername": "kaisantos.ph",
+  "messengerNote": "Opens Messenger with your message ready to send.",
+  "bookingUrl": "https://cal.com/kaisantos/shoot",
+  "bookingLabel": "Check shoot availability",
+  "socialLinks": [
+    {
+      "platform": "Instagram",
+      "url": "https://instagram.com/kaisantos.ph"
+    },
+    {
+      "platform": "TikTok",
+      "url": "https://tiktok.com/@kaisantos.ph"
+    },
+    {
+      "platform": "YouTube",
+      "url": "https://youtube.com/@kaisantos"
+    },
+    {
+      "platform": "Facebook",
+      "url": "https://facebook.com/kaisantos.ph"
+    }
+  ],
+  "copyright": "© 2026 Kai Santos Creative",
+  "rpTemplate": "style3"
+}

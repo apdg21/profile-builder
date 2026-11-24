@@ -1,0 +1,513 @@
+{
+  "profile_templates": {
+    "style1": {
+      "fullName": "Maya Reyes",
+      "headline": "Brand & web designer",
+      "tagline": "I help small businesses look as good online as they do in person.",
+      "profileImage": "assets/profile.jpg",
+      "coverImage": "",
+      "location": "Cebu City, Philippines",
+      "availability": "Open for projects this January",
+      "businessName": "Maya Reyes Studio",
+      "businessUrl": "",
+      "ctaText": "Message me on Messenger",
+      "ctaUrl": "",
+      "aboutTitle": "About",
+      "aboutText": "I'm Maya, a brand and web designer based in Cebu.\n\nFor the last eight years I've helped cafés, clinics, and family businesses look like the version of themselves they want customers to meet — clear logos, warm websites, and print that feels considered.\n\nMost of my work is one-on-one with the owner. No handoff to a stranger halfway through.",
+      "servicesTitle": "What I do",
+      "servicesIntro": "Fixed-scope projects, quoted before we start.",
+      "services": [
+        {
+          "title": "Brand identity",
+          "description": "Logo, colours, type, and a one-page guide you can hand to any printer.",
+          "price": "from ₱18,000",
+          "link": ""
+        },
+        {
+          "title": "One-page website",
+          "description": "A fast, mobile-first site with your story, services, and a way to message you.",
+          "price": "from ₱12,000",
+          "link": ""
+        },
+        {
+          "title": "Menu & print",
+          "description": "Menus, packaging, and storefront signage that match your brand.",
+          "price": "from ₱6,000",
+          "link": ""
+        }
+      ],
+      "workTitle": "Recent work",
+      "work": [
+        {
+          "role": "Brand identity",
+          "company": "Harbor Coffee",
+          "period": "2025",
+          "description": "A full rebrand for a three-branch coffee shop, from packaging to signage."
+        },
+        {
+          "role": "Website design",
+          "company": "Isla Dental",
+          "period": "2024",
+          "description": "A calm, appointment-first site for a family dental clinic."
+        },
+        {
+          "role": "Packaging",
+          "company": "Lola's Chips",
+          "period": "2024",
+          "description": "Shelf-ready packaging for a homegrown snack brand."
+        }
+      ],
+      "skillsTitle": "Tools & skills",
+      "skills": [
+        {
+          "name": "Brand strategy"
+        },
+        {
+          "name": "Logo design"
+        },
+        {
+          "name": "Figma"
+        },
+        {
+          "name": "Webflow"
+        },
+        {
+          "name": "Typography"
+        },
+        {
+          "name": "Print production"
+        }
+      ],
+      "credentialsTitle": "Background",
+      "credentials": [
+        {
+          "title": "BA Communication Arts",
+          "issuer": "University of San Carlos",
+          "year": "2014"
+        },
+        {
+          "title": "Certified Webflow Partner",
+          "issuer": "Webflow",
+          "year": "2022"
+        }
+      ],
+      "testimonialsTitle": "Kind words",
+      "testimonials": [
+        {
+          "text": "Maya took a messy idea and gave us a brand we're proud to put on the door.",
+          "author": "Ana Lim",
+          "role": "Owner, Harbor Coffee"
+        },
+        {
+          "text": "She asked better questions than any agency we talked to — and delivered early.",
+          "author": "Dr. Rey Tan",
+          "role": "Isla Dental"
+        }
+      ],
+      "faqTitle": "Common questions",
+      "faq": [
+        {
+          "question": "How long does a project take?",
+          "answer": "A one-page site is usually two to three weeks. Full branding runs four to six."
+        },
+        {
+          "question": "Do you work with clients outside Cebu?",
+          "answer": "Yes — most of my work is remote, with calls scheduled in your time zone."
+        }
+      ],
+      "contactTitle": "Get in touch",
+      "contactIntro": "Tell me what you're building. I reply within one working day.",
+      "email": "hello@mayareyes.studio",
+      "phone": "+63 917 555 0123",
+      "messengerUsername": "mayareyes.studio",
+      "messengerNote": "Opens Messenger with your message ready to send.",
+      "bookingUrl": "https://cal.com/mayareyes/15min",
+      "bookingLabel": "Book a 15-minute call",
+      "socialLinks": [
+        {
+          "platform": "Facebook",
+          "url": "https://facebook.com/mayareyes.studio"
+        },
+        {
+          "platform": "Instagram",
+          "url": "https://instagram.com/mayareyes.studio"
+        },
+        {
+          "platform": "LinkedIn",
+          "url": "https://linkedin.com/in/mayareyes"
+        }
+      ],
+      "copyright": "© 2026 Maya Reyes Studio",
+      "rpTemplate": "style1"
+    },
+    "style2": {
+      "fullName": "Daniel Cruz",
+      "headline": "Operations & growth consultant",
+      "tagline": "I help founder-led companies build the operating rhythm that lets them grow without the chaos.",
+      "profileImage": "assets/profile.jpg",
+      "coverImage": "",
+      "location": "Makati City, Philippines",
+      "availability": "Taking two clients for Q1",
+      "businessName": "Cruz Advisory",
+      "businessUrl": "https://cruzadvisory.ph",
+      "ctaText": "Book an intro call",
+      "ctaUrl": "",
+      "aboutTitle": "About",
+      "aboutText": "I spent eleven years running operations inside growing Philippine companies before starting Cruz Advisory in 2021.\n\nI work with founders who have product-market fit but are drowning in process debt — the kind that shows up as missed deadlines, key-person risk, and a team that can't tell you what 'done' means.\n\nMy work is hands-on. We diagnose together, fix the two or three things that actually move the business, then hand your team a system they can run without me.",
+      "servicesTitle": "How I work",
+      "servicesIntro": "Three ways to engage, depending on what stage you are in.",
+      "services": [
+        {
+          "title": "Operations diagnostic",
+          "description": "A two-week review of your team, tools, and delivery cycle, ending with a prioritised action plan.",
+          "price": "",
+          "link": ""
+        },
+        {
+          "title": "Fractional COO",
+          "description": "Two days a week inside your leadership team, owning delivery and hiring until you are ready to hire your own.",
+          "price": "",
+          "link": ""
+        },
+        {
+          "title": "Founder advisory",
+          "description": "A standing monthly session for founders who need a thinking partner, not a consultant deck.",
+          "price": "",
+          "link": ""
+        }
+      ],
+      "workTitle": "Experience",
+      "work": [
+        {
+          "role": "Founder & Principal",
+          "company": "Cruz Advisory",
+          "period": "2021 — present",
+          "description": "Advised 30+ founder-led companies on operations, hiring, and delivery."
+        },
+        {
+          "role": "Head of Operations",
+          "company": "Pamilya Logistics",
+          "period": "2016 — 2021",
+          "description": "Built the operating model that took the company from 40 to 400 employees."
+        },
+        {
+          "role": "Operations Manager",
+          "company": "Metro Retail Group",
+          "period": "2010 — 2016",
+          "description": "Ran store operations for a 60-branch retail network."
+        }
+      ],
+      "skillsTitle": "Areas of focus",
+      "skills": [
+        {
+          "name": "Operating models"
+        },
+        {
+          "name": "Hiring & org design"
+        },
+        {
+          "name": "Process improvement"
+        },
+        {
+          "name": "Unit economics"
+        },
+        {
+          "name": "Founder coaching"
+        }
+      ],
+      "credentialsTitle": "Credentials",
+      "credentials": [
+        {
+          "title": "MBA, Strategy",
+          "issuer": "Asian Institute of Management",
+          "year": "2015"
+        },
+        {
+          "title": "Lean Six Sigma Black Belt",
+          "issuer": "ASQ",
+          "year": "2018"
+        }
+      ],
+      "testimonialsTitle": "Client feedback",
+      "testimonials": [
+        {
+          "text": "Daniel rebuilt our delivery process in six weeks. The same team now ships twice as much without working later.",
+          "author": "Patricia Go",
+          "role": "CEO, Pamilya Logistics"
+        },
+        {
+          "text": "He tells you what he actually thinks, which is rarer and more useful than it sounds.",
+          "author": "Miguel Tan",
+          "role": "Founder, Seedling PH"
+        }
+      ],
+      "faqTitle": "Working together",
+      "faq": [
+        {
+          "question": "Do you take equity?",
+          "answer": "No. I charge a flat monthly fee so my advice stays independent."
+        },
+        {
+          "question": "What size company do you work with?",
+          "answer": "Usually 15 to 250 people, founder-led, past product-market fit."
+        }
+      ],
+      "contactTitle": "Start a conversation",
+      "contactIntro": "Send a short note about your company and what is not working. If I can help, we will book a call.",
+      "email": "daniel@cruzadvisory.ph",
+      "phone": "+63 917 555 0198",
+      "messengerUsername": "",
+      "messengerNote": "",
+      "bookingUrl": "https://cal.com/danielcruz/intro",
+      "bookingLabel": "Book a 30-minute intro call",
+      "socialLinks": [
+        {
+          "platform": "LinkedIn",
+          "url": "https://linkedin.com/in/danielcruzph"
+        },
+        {
+          "platform": "Website",
+          "url": "https://cruzadvisory.ph"
+        }
+      ],
+      "copyright": "© 2026 Cruz Advisory",
+      "rpTemplate": "style2"
+    },
+    "style3": {
+      "fullName": "Kai Santos",
+      "headline": "Content creator & photographer",
+      "tagline": "Travel, food, and the people behind small brands — shot on location in the Philippines.",
+      "profileImage": "assets/profile.jpg",
+      "coverImage": "",
+      "location": "Davao City, Philippines",
+      "availability": "Booking shoots for Feb–Apr",
+      "businessName": "Kai Santos Creative",
+      "businessUrl": "",
+      "ctaText": "Book a shoot",
+      "ctaUrl": "",
+      "aboutTitle": "About",
+      "aboutText": "I make photos and short-form video for travel brands, restaurants, and people who are proud of what they build.\n\nI started posting Davao food walks in 2019. Six years later I split my time between commissioned shoots and my own series about small businesses in Mindanao.\n\nIf you want polished but not plastic, we will get along.",
+      "servicesTitle": "Work with me",
+      "servicesIntro": "Rates are starting points. Tell me the story and we will scope it properly.",
+      "services": [
+        {
+          "title": "Brand shoot",
+          "description": "Half-day photo session: menu, product, team, and space, delivered in a shared gallery.",
+          "price": "from ₱15,000",
+          "link": ""
+        },
+        {
+          "title": "Short-form video",
+          "description": "Three vertical videos edited for Reels, TikTok, and Facebook.",
+          "price": "from ₱20,000",
+          "link": ""
+        },
+        {
+          "title": "Travel feature",
+          "description": "A destination story for tourism boards and hotels, photo and video.",
+          "price": "by project",
+          "link": ""
+        }
+      ],
+      "workTitle": "Selected work",
+      "work": [
+        {
+          "role": "Food series",
+          "company": "Davao Food Walks",
+          "period": "2019 — present",
+          "description": "A self-published series on 80+ small food businesses in Mindanao."
+        },
+        {
+          "role": "Campaign shoot",
+          "company": "Pearl Farm Beach Resort",
+          "period": "2025",
+          "description": "Photo and video for a seasonal campaign, shot over four days."
+        },
+        {
+          "role": "Brand refresh",
+          "company": "Kape Mindanao",
+          "period": "2024",
+          "description": "Packaging photography and a content library for a local roaster."
+        }
+      ],
+      "skillsTitle": "What I shoot",
+      "skills": [
+        {
+          "name": "Food & beverage"
+        },
+        {
+          "name": "Travel"
+        },
+        {
+          "name": "Portrait"
+        },
+        {
+          "name": "Short-form video"
+        },
+        {
+          "name": "Drone"
+        },
+        {
+          "name": "Lightroom"
+        }
+      ],
+      "credentialsTitle": "Recognition",
+      "credentials": [
+        {
+          "title": "Best Travel Feature",
+          "issuer": "Mindanao Media Awards",
+          "year": "2024"
+        },
+        {
+          "title": "Featured Creator",
+          "issuer": "TikTok Philippines",
+          "year": "2023"
+        }
+      ],
+      "testimonialsTitle": "What clients say",
+      "testimonials": [
+        {
+          "text": "Kai made our whole team relax on camera. The photos are still the ones we use everywhere.",
+          "author": "Bea Ong",
+          "role": "Kape Mindanao"
+        },
+        {
+          "text": "Fast, kind, and genuinely creative. Our bookings went up the week the videos went live.",
+          "author": "Marco Diaz",
+          "role": "Pearl Farm Beach Resort"
+        }
+      ],
+      "faqTitle": "Good to know",
+      "faq": [
+        {
+          "question": "Do you travel outside Davao?",
+          "answer": "Yes. Travel is quoted separately, and I waive it for advocacy projects."
+        },
+        {
+          "question": "How do I get the photos?",
+          "answer": "A private online gallery with full-resolution downloads, usually within seven days."
+        }
+      ],
+      "contactTitle": "Let's make something",
+      "contactIntro": "Send me your dates, location, and what you want people to feel when they see it.",
+      "email": "kai@kaisantos.ph",
+      "phone": "+63 917 555 0144",
+      "messengerUsername": "kaisantos.ph",
+      "messengerNote": "Opens Messenger with your message ready to send.",
+      "bookingUrl": "https://cal.com/kaisantos/shoot",
+      "bookingLabel": "Check shoot availability",
+      "socialLinks": [
+        {
+          "platform": "Instagram",
+          "url": "https://instagram.com/kaisantos.ph"
+        },
+        {
+          "platform": "TikTok",
+          "url": "https://tiktok.com/@kaisantos.ph"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://youtube.com/@kaisantos"
+        },
+        {
+          "platform": "Facebook",
+          "url": "https://facebook.com/kaisantos.ph"
+        }
+      ],
+      "copyright": "© 2026 Kai Santos Creative",
+      "rpTemplate": "style3"
+    },
+    "style4": {
+      "fullName": "Ana Villanueva",
+      "headline": "Software engineer",
+      "tagline": "Backend systems, payments, and the unglamorous work that keeps products running.",
+      "profileImage": "assets/profile.jpg",
+      "coverImage": "",
+      "location": "Quezon City, Philippines",
+      "availability": "Not looking for full-time roles",
+      "businessName": "",
+      "businessUrl": "",
+      "ctaText": "Email me",
+      "ctaUrl": "",
+      "aboutTitle": "About",
+      "aboutText": "I build and maintain backend systems for fintech and e-commerce teams.\n\nMost of my work is in Go and TypeScript: payment flows, reconciliation jobs, and the APIs that sit between them. I care about clear failure modes, useful logs, and tests that catch real problems.\n\nOutside work I maintain a small open-source library for webhook retries and write occasionally about production incidents.",
+      "servicesTitle": "",
+      "servicesIntro": "",
+      "services": [],
+      "workTitle": "Experience",
+      "work": [
+        {
+          "role": "Senior Software Engineer",
+          "company": "Meridian Payments",
+          "period": "2023 — present",
+          "description": "Own the payments API and reconciliation pipeline processing about ₱2B monthly."
+        },
+        {
+          "role": "Software Engineer",
+          "company": "Sari-Sari Commerce",
+          "period": "2020 — 2023",
+          "description": "Built order and inventory services for a nationwide sari-sari store platform."
+        },
+        {
+          "role": "Junior Engineer",
+          "company": "Kalayaan Labs",
+          "period": "2018 — 2020",
+          "description": "Worked across a Go monolith and the React admin tools around it."
+        }
+      ],
+      "skillsTitle": "Skills",
+      "skills": [
+        {
+          "name": "Go"
+        },
+        {
+          "name": "TypeScript"
+        },
+        {
+          "name": "PostgreSQL"
+        },
+        {
+          "name": "Redis"
+        },
+        {
+          "name": "Kubernetes"
+        },
+        {
+          "name": "Observability"
+        }
+      ],
+      "credentialsTitle": "Education",
+      "credentials": [
+        {
+          "title": "BS Computer Science",
+          "issuer": "University of the Philippines",
+          "year": "2018"
+        }
+      ],
+      "testimonialsTitle": "",
+      "testimonials": [],
+      "faqTitle": "",
+      "faq": [],
+      "contactTitle": "Contact",
+      "contactIntro": "Email is the best way to reach me.",
+      "email": "ana@villanueva.dev",
+      "phone": "",
+      "messengerUsername": "",
+      "messengerNote": "",
+      "bookingUrl": "",
+      "bookingLabel": "",
+      "socialLinks": [
+        {
+          "platform": "GitHub",
+          "url": "https://github.com/anavillanueva"
+        },
+        {
+          "platform": "LinkedIn",
+          "url": "https://linkedin.com/in/anavillanueva"
+        }
+      ],
+      "copyright": "© 2026 Ana Villanueva",
+      "rpTemplate": "style4"
+    }
+  }
+}

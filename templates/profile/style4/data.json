@@ -1,0 +1,92 @@
+{
+  "fullName": "Ana Villanueva",
+  "headline": "Software engineer",
+  "tagline": "Backend systems, payments, and the unglamorous work that keeps products running.",
+  "profileImage": "assets/profile.jpg",
+  "coverImage": "",
+  "location": "Quezon City, Philippines",
+  "availability": "Not looking for full-time roles",
+  "businessName": "",
+  "businessUrl": "",
+  "ctaText": "Email me",
+  "ctaUrl": "",
+  "aboutTitle": "About",
+  "aboutText": "I build and maintain backend systems for fintech and e-commerce teams.\n\nMost of my work is in Go and TypeScript: payment flows, reconciliation jobs, and the APIs that sit between them. I care about clear failure modes, useful logs, and tests that catch real problems.\n\nOutside work I maintain a small open-source library for webhook retries and write occasionally about production incidents.",
+  "servicesTitle": "",
+  "servicesIntro": "",
+  "services": [],
+  "workTitle": "Experience",
+  "work": [
+    {
+      "role": "Senior Software Engineer",
+      "company": "Meridian Payments",
+      "period": "2023 — present",
+      "description": "Own the payments API and reconciliation pipeline processing about ₱2B monthly."
+    },
+    {
+      "role": "Software Engineer",
+      "company": "Sari-Sari Commerce",
+      "period": "2020 — 2023",
+      "description": "Built order and inventory services for a nationwide sari-sari store platform."
+    },
+    {
+      "role": "Junior Engineer",
+      "company": "Kalayaan Labs",
+      "period": "2018 — 2020",
+      "description": "Worked across a Go monolith and the React admin tools around it."
+    }
+  ],
+  "skillsTitle": "Skills",
+  "skills": [
+    {
+      "name": "Go"
+    },
+    {
+      "name": "TypeScript"
+    },
+    {
+      "name": "PostgreSQL"
+    },
+    {
+      "name": "Redis"
+    },
+    {
+      "name": "Kubernetes"
+    },
+    {
+      "name": "Observability"
+    }
+  ],
+  "credentialsTitle": "Education",
+  "credentials": [
+    {
+      "title": "BS Computer Science",
+      "issuer": "University of the Philippines",
+      "year": "2018"
+    }
+  ],
+  "testimonialsTitle": "",
+  "testimonials": [],
+  "faqTitle": "",
+  "faq": [],
+  "contactTitle": "Contact",
+  "contactIntro": "Email is the best way to reach me.",
+  "email": "ana@villanueva.dev",
+  "phone": "",
+  "messengerUsername": "",
+  "messengerNote": "",
+  "bookingUrl": "",
+  "bookingLabel": "",
+  "socialLinks": [
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/anavillanueva"
+    },
+    {
+      "platform": "LinkedIn",
+      "url": "https://linkedin.com/in/anavillanueva"
+    }
+  ],
+  "copyright": "© 2026 Ana Villanueva",
+  "rpTemplate": "style4"
+}

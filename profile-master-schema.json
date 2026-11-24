@@ -1,0 +1,336 @@
+[
+  {
+    "path": "fullName",
+    "label": "Your name",
+    "type": "text",
+    "section": "Basics",
+    "required": true
+  },
+  {
+    "path": "headline",
+    "label": "What you do (headline)",
+    "type": "text",
+    "section": "Basics",
+    "required": true
+  },
+  {
+    "path": "tagline",
+    "label": "Short intro line (optional)",
+    "type": "text",
+    "section": "Basics"
+  },
+  {
+    "path": "profileImage",
+    "label": "Profile photo",
+    "type": "image",
+    "section": "Basics"
+  },
+  {
+    "path": "coverImage",
+    "label": "Hero background photo (optional — leave empty for the design’s colour)",
+    "type": "image",
+    "section": "Basics"
+  },
+  {
+    "path": "location",
+    "label": "Location (optional)",
+    "type": "text",
+    "section": "Basics"
+  },
+  {
+    "path": "availability",
+    "label": "Availability badge (optional — e.g. “Open for freelance work”)",
+    "type": "text",
+    "section": "Basics"
+  },
+  {
+    "path": "businessName",
+    "label": "Business or brand name (optional)",
+    "type": "text",
+    "section": "Basics"
+  },
+  {
+    "path": "businessUrl",
+    "label": "Business website (optional)",
+    "type": "text",
+    "section": "Basics"
+  },
+  {
+    "path": "ctaText",
+    "label": "Main hero button text (optional — e.g. “Book a call”)",
+    "type": "text",
+    "section": "Basics"
+  },
+  {
+    "path": "ctaUrl",
+    "label": "Main hero button link (optional — leave empty to scroll to Contact)",
+    "type": "text",
+    "section": "Basics"
+  },
+  {
+    "path": "aboutTitle",
+    "label": "About heading (optional)",
+    "type": "text",
+    "section": "About"
+  },
+  {
+    "path": "aboutText",
+    "label": "About you — separate paragraphs with a blank line",
+    "type": "textarea",
+    "section": "About"
+  },
+  {
+    "path": "servicesTitle",
+    "label": "Services heading (optional)",
+    "type": "text",
+    "section": "Services"
+  },
+  {
+    "path": "servicesIntro",
+    "label": "Services intro (optional)",
+    "type": "textarea",
+    "section": "Services"
+  },
+  {
+    "path": "services",
+    "label": "Services / offers",
+    "type": "repeatable",
+    "section": "Services",
+    "optional": true,
+    "itemFields": [
+      {
+        "path": "title",
+        "label": "Service",
+        "type": "text"
+      },
+      {
+        "path": "description",
+        "label": "Description",
+        "type": "textarea"
+      },
+      {
+        "path": "price",
+        "label": "Price / rate (optional)",
+        "type": "text"
+      },
+      {
+        "path": "link",
+        "label": "Link (optional)",
+        "type": "text"
+      }
+    ]
+  },
+  {
+    "path": "workTitle",
+    "label": "Experience heading (optional)",
+    "type": "text",
+    "section": "Work"
+  },
+  {
+    "path": "work",
+    "label": "Experience / selected work",
+    "type": "repeatable",
+    "section": "Work",
+    "optional": true,
+    "itemFields": [
+      {
+        "path": "role",
+        "label": "Role or project",
+        "type": "text"
+      },
+      {
+        "path": "company",
+        "label": "Company / client (optional)",
+        "type": "text"
+      },
+      {
+        "path": "period",
+        "label": "Year or period (optional)",
+        "type": "text"
+      },
+      {
+        "path": "description",
+        "label": "What you did (optional)",
+        "type": "textarea"
+      }
+    ]
+  },
+  {
+    "path": "skillsTitle",
+    "label": "Skills heading (optional)",
+    "type": "text",
+    "section": "Skills"
+  },
+  {
+    "path": "skills",
+    "label": "Skills",
+    "type": "repeatable",
+    "section": "Skills",
+    "optional": true,
+    "itemFields": [
+      {
+        "path": "name",
+        "label": "Skill",
+        "type": "text"
+      }
+    ]
+  },
+  {
+    "path": "credentialsTitle",
+    "label": "Credentials heading (optional)",
+    "type": "text",
+    "section": "Credentials"
+  },
+  {
+    "path": "credentials",
+    "label": "Education, certificates, awards",
+    "type": "repeatable",
+    "section": "Credentials",
+    "optional": true,
+    "itemFields": [
+      {
+        "path": "title",
+        "label": "Title",
+        "type": "text"
+      },
+      {
+        "path": "issuer",
+        "label": "School / issuer (optional)",
+        "type": "text"
+      },
+      {
+        "path": "year",
+        "label": "Year (optional)",
+        "type": "text"
+      }
+    ]
+  },
+  {
+    "path": "testimonialsTitle",
+    "label": "Testimonials heading (optional)",
+    "type": "text",
+    "section": "Testimonials"
+  },
+  {
+    "path": "testimonials",
+    "label": "Testimonials",
+    "type": "repeatable",
+    "section": "Testimonials",
+    "optional": true,
+    "itemFields": [
+      {
+        "path": "text",
+        "label": "Quote",
+        "type": "textarea"
+      },
+      {
+        "path": "author",
+        "label": "Name",
+        "type": "text"
+      },
+      {
+        "path": "role",
+        "label": "Role / company (optional)",
+        "type": "text"
+      }
+    ]
+  },
+  {
+    "path": "faqTitle",
+    "label": "FAQ heading (optional)",
+    "type": "text",
+    "section": "FAQ"
+  },
+  {
+    "path": "faq",
+    "label": "Questions and answers",
+    "type": "repeatable",
+    "section": "FAQ",
+    "optional": true,
+    "itemFields": [
+      {
+        "path": "question",
+        "label": "Question",
+        "type": "text"
+      },
+      {
+        "path": "answer",
+        "label": "Answer",
+        "type": "textarea"
+      }
+    ]
+  },
+  {
+    "path": "contactTitle",
+    "label": "Contact heading (optional)",
+    "type": "text",
+    "section": "Contact"
+  },
+  {
+    "path": "contactIntro",
+    "label": "Contact intro (optional)",
+    "type": "textarea",
+    "section": "Contact"
+  },
+  {
+    "path": "email",
+    "label": "Email (optional — but recommended for search results)",
+    "type": "text",
+    "section": "Contact"
+  },
+  {
+    "path": "phone",
+    "label": "Phone / Viber number (optional)",
+    "type": "text",
+    "section": "Contact"
+  },
+  {
+    "path": "messengerUsername",
+    "label": "Facebook username or Page name — for Messenger messages (optional)",
+    "type": "text",
+    "section": "Contact"
+  },
+  {
+    "path": "messengerNote",
+    "label": "Note under the Messenger form (optional)",
+    "type": "text",
+    "section": "Contact"
+  },
+  {
+    "path": "bookingUrl",
+    "label": "Booking / calendar link (optional — Calendly, Cal.com, Google Appointments…)",
+    "type": "text",
+    "section": "Contact"
+  },
+  {
+    "path": "bookingLabel",
+    "label": "Booking button text (optional)",
+    "type": "text",
+    "section": "Contact"
+  },
+  {
+    "path": "socialLinks",
+    "label": "Social links",
+    "type": "repeatable",
+    "section": "Social",
+    "optional": true,
+    "itemFields": [
+      {
+        "path": "platform",
+        "label": "Platform (Facebook, Instagram, LinkedIn, TikTok, YouTube, GitHub, Viber, Website…)",
+        "type": "text"
+      },
+      {
+        "path": "url",
+        "label": "Link",
+        "type": "text"
+      }
+    ]
+  },
+  {
+    "path": "copyright",
+    "label": "Footer line (optional)",
+    "type": "text",
+    "section": "Footer"
+  }
+]

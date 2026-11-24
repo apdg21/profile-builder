@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W52LYHBGZY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-W52LYHBGZY');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ResumePro — Profile Builder</title>
+<meta name="description" content="Build a personal profile page that search engines can find: your work, services, skills, social links, booking calendar and a Messenger contact form. Free to build and preview — $15 one-time to publish.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../header.css">
+<link rel="stylesheet" href="../footer.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0e0e12;
+    --ink-soft: #6b6b78;
+    --paper: #fafaf8;
+    --paper-warm: #f4f1eb;
+    --card: #ffffff;
+    --accent: #c8a96e;
+    --accent-light: #e8d9b8;
+    --accent-dark: #9a7a3f;
+    --accent-tint: #f7f1e4;
+    --border: #e2e0d8;
+    --success: #2d7a4f;
+    --error: #b3432f;
+    --error-tint: #fbeae6;
+    --dark: #0e0e12;
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'DM Sans', 'Segoe UI', system-ui, sans-serif;
+    --primary-color: var(--ink);
+    --text-color: var(--ink);
+    --muted-color: var(--ink-soft);
+    --bg-color: var(--paper);
+  }
+  * { box-sizing: border-box; }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--font-body); background: var(--paper); color: var(--ink); margin:0; padding:0; overflow-x: hidden; line-height: 1.6; }
+  .page-content {padding: 32px 24px 60px;}
+  .wrap { max-width: 1200px; margin: 0 auto; display:grid; gap:24px; grid-template-columns: 1fr; min-width: 0; }
+  @media (min-width:1000px){ .wrap.two-col { grid-template-columns: 480px 1fr; } }
+
+  .brand-bar { max-width:1200px; margin:60px auto 28px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; }
+  .brand-mark { display:flex; align-items:center; gap:10px; font-family: var(--font-display); font-weight:700; font-size:20px; color: var(--ink); }
+  .brand-mark .doc-icon { width:30px; height:30px; border-radius:7px; background:var(--ink); display:flex; align-items:center; justify-content:center; color:var(--accent); font-size:12px; font-weight:700; letter-spacing:0.02em; flex-shrink:0; font-family:var(--font-body); }
+  .badge-pill { display:inline-flex; align-items:center; gap:6px; background:var(--ink); color:var(--accent); font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:6px 14px; border-radius:999px; }
+
+  .panel { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:24px; box-shadow:0 1px 2px rgba(14,14,18,0.03), 0 8px 24px rgba(14,14,18,0.04); min-width: 0; }
+  .step-head { display:flex; align-items:center; gap:14px; margin-bottom:4px; }
+  .step-badge { width:36px; height:36px; border-radius:50%; background:var(--accent-tint); color:var(--accent-dark); font-family:var(--font-display); font-weight:700; font-size:17px; display:flex; align-items:center; justify-content:center; flex-shrink:0; border:1px solid rgba(154,122,63,0.22); }
+  h1 { font-family: var(--font-display); font-size:19px; font-weight:700; margin:0; color:var(--ink); letter-spacing:-0.01em; }
+  h2 { font-family: var(--font-display); font-size:15px; font-weight:600; margin:22px 0 12px; color:var(--accent-dark); border-bottom:1px solid var(--border); padding-bottom:8px; }
+  .sub { color:var(--ink-soft); font-size:13px; margin:8px 0 14px; line-height:1.55; }
+  label { font-size:12px; font-weight:600; display:block; margin:8px 0 4px; color:var(--ink); }
+  input[type=text], input[type=number], textarea, select {
+    width:100%; padding:9px 11px; border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--font-body); background:var(--paper); color:var(--ink);
+  }
+  input:focus, textarea:focus, select:focus { outline:2px solid var(--accent-dark); outline-offset:1px; }
+  textarea { min-height:60px; resize:vertical; }
+
+  /* Template dropdown — styled so it clearly reads as a select control */
+  .tpl-select-label { display:flex; align-items:baseline; justify-content:space-between; gap:10px; flex-wrap:wrap; margin:2px 0 8px; }
+  .tpl-select-label label { display:inline; margin:0; font-size:12.5px; font-weight:700; color:var(--ink); letter-spacing:0.01em; }
+  .tpl-select-label .tpl-select-hint { font-size:11.5px; color:var(--ink-soft); }
+  #templateSelect {
+    appearance:none; -webkit-appearance:none; -moz-appearance:none;
+    width:100%; padding:13px 46px 13px 14px;
+    border:2px solid var(--accent-dark); border-radius:10px;
+    background-color:#ffffff;
+    background-image:url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239a7a3f' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat:no-repeat; background-position:right 14px center; background-size:17px 17px;
+    font-family:var(--font-body); font-size:14.5px; font-weight:600; color:var(--ink);
+    cursor:pointer; box-shadow:0 1px 2px rgba(14,14,18,0.05);
+    transition:border-color .15s ease, box-shadow .15s ease, background-color .15s ease;
+  }
+  #templateSelect:hover { border-color:#7a5f2f; background-color:var(--accent-tint); box-shadow:0 3px 10px rgba(154,122,63,0.16); }
+  #templateSelect:focus { outline:none; border-color:var(--accent-dark); box-shadow:0 0 0 4px rgba(154,122,63,0.2); }
+  .item-card { border:1px solid var(--border); border-radius:10px; padding:12px; margin-bottom:10px; background:var(--paper); position:relative; }
+  .item-card .remove-btn { position:absolute; top:8px; right:8px; background:var(--error-tint); color:var(--error); border:none; border-radius:6px; padding:4px 8px; font-size:11px; cursor:pointer; font-family:var(--font-body); font-weight:600; }
+  .items-container.nested { margin:6px 0 8px; padding:10px 10px 4px; border-left:3px solid var(--accent-light); background:var(--card); border-radius:0 8px 8px 0; }
+  .items-container.nested .item-card { background:var(--paper-warm); }
+  .item-image { padding:6px; font-size:12px; }
+  .item-image-preview { display:block; max-width:120px; border-radius:6px; margin-top:6px; }
+  .add-btn { background:var(--accent-tint); color:var(--accent-dark); border:1px dashed var(--accent-dark); padding:8px; border-radius:8px; font-size:13px; cursor:pointer; width:100%; margin-top:4px; font-family:var(--font-body); font-weight:600; }
+  .add-btn:hover { background:var(--accent-light); }
+  button.primary { background:var(--ink); color:var(--paper); border:none; padding:11px 20px; border-radius:10px; font-size:14px; cursor:pointer; font-weight:600; margin-top:10px; font-family:var(--font-body); transition:background 0.15s; }
+  button.primary:hover:not(:disabled) { background:var(--accent-dark); }
+  button.primary:disabled { opacity:0.5; cursor:not-allowed; }
+  button.secondary { background:var(--card); color:var(--ink); border:1px solid var(--border); padding:10px 18px; border-radius:10px; font-size:14px; cursor:pointer; font-weight:600; font-family:var(--font-body); transition:background 0.15s; }
+  button.secondary:hover:not(:disabled) { background:var(--paper-warm); }
+  .status { font-size:13px; color:var(--ink-soft); margin-top:8px; min-height:18px; }
+  .status.error { color:var(--error); } .status.success { color:var(--success); }
+  button.is-loading { pointer-events: none; opacity: 0.75; }
+  button.is-loading::before {
+    content: ''; display: inline-block; width: 14px; height: 14px; margin-right: 8px; vertical-align: -2px;
+    border-radius: 50%; border: 2px solid rgba(255, 255, 255, 0.35); border-top-color: #fff;
+    animation: rpSpin 0.7s linear infinite;
+  }
+  button.secondary.is-loading::before { border-color: rgba(14, 14, 18, 0.2); border-top-color: var(--ink); }
+  @keyframes rpSpin { to { transform: rotate(360deg); } }
+
+  .img-upload { display:flex; align-items:center; gap:12px; margin-top:6px; }
+  .img-preview { width:64px; height:64px; border-radius:10px; object-fit:cover; background:var(--paper); border:1px solid var(--border); }
+  .json-box { background:var(--ink); color:var(--accent-light); font-family:'Courier New',monospace; font-size:12px; padding:14px; border-radius:10px; max-height:480px; width:600px; max-width:100%; overflow:auto; white-space:pre-wrap; min-width:0; border:1px solid rgba(255,255,255,0.06); }
+  ::selection { background: var(--accent-light); color: var(--ink); }
+
+  /* Theme & Color Switcher */
+  .theme-swatch-grid { display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
+  .theme-pill {
+    display:inline-flex; align-items:center; gap:7px; padding:6px 12px;
+    background:var(--card); border:1px solid var(--border); border-radius:999px;
+    font-size:12px; font-weight:500; color:var(--ink); cursor:pointer;
+    transition:all 0.15s ease; user-select:none; font-family:var(--font-body);
+  }
+  .theme-pill:hover { border-color:var(--accent); transform:translateY(-1px); }
+  .theme-pill.active { border-color:var(--accent-dark); background:var(--accent-tint); font-weight:600; box-shadow:0 0 0 2px rgba(200,169,110,0.25); }
+  .theme-circle { width:16px; height:16px; border-radius:50%; border:1px solid rgba(0,0,0,0.15); flex-shrink:0; position:relative; box-shadow:inset 0 0 0 1px rgba(255,255,255,0.4); }
+
+  /* Technical parts stay in the page for the code, but customers never see them */
+  #resultBox, #downloadJsonBtn { display: none !important; }
+  .price-note { background: var(--accent-tint); border: 1px solid rgba(154,122,63,0.22); }
+  .price-note strong { color: var(--accent-dark); }
+
+  /* --- Section editor (structure | preview | properties) --- */
+  .editor-wrap { max-width: 1760px; }
+  .editor-grid { display:grid; grid-template-columns: 210px minmax(0,1fr) 320px; align-items:stretch; }
+  @media (max-width:1180px){ .editor-grid { grid-template-columns: 210px minmax(0,1fr); } .editor-properties { grid-column:1 / -1; border-left:0; border-top:1px solid var(--border); } }
+  @media (max-width:860px){ .editor-grid { grid-template-columns:1fr; } .editor-rail { border-right:0; border-bottom:1px solid var(--border); } }
+
+  .editor-rail { background:#f8fafc; border-right:1px solid var(--border); padding:14px 12px; max-height:720px; overflow:auto; }
+  .editor-properties { border-left:1px solid var(--border); padding:14px 16px; max-height:720px; overflow:auto; background:#fff; }
+  .editor-canvas { background:#e8edf3; padding:14px; display:flex; flex-direction:column; min-width:0; }
+  .editor-canvas-head { display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:10px; font-size:12.5px; color:var(--ink-soft); }
+  .editor-canvas-head strong { color:var(--ink); font-size:13px; }
+  .editor-canvas-body { position:relative; height:720px; background:#fff; border-radius:10px; overflow:hidden; box-shadow:0 10px 30px rgba(15,23,42,.14); }
+  #editorPreview { width:100%; height:720px; border:0; display:block; background:#fff; transform-origin:top left; }
+  @media (max-width:860px){ .editor-canvas-body { height:520px; } }
+
+  .editor-panel-head { font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:10px; }
+  .editor-section-btn { display:flex; align-items:center; gap:10px; width:100%; text-align:left; padding:9px 10px; margin-bottom:4px; border:1px solid transparent; border-radius:9px; background:transparent; cursor:pointer; font-family:var(--font-body); font-size:13px; font-weight:600; color:var(--ink); }
+  .editor-section-btn:hover:not(:disabled) { background:#fff; border-color:var(--border); }
+  .editor-section-btn.is-active { background:#fff; border-color:var(--accent-dark); box-shadow:0 1px 4px rgba(0,0,0,.07); }
+  .editor-section-btn.is-unsupported { opacity:.4; cursor:not-allowed; }
+  .editor-section-icon { font-size:15px; width:20px; text-align:center; }
+  .editor-section-item { display:flex; align-items:center; gap:5px; margin-bottom:4px; }
+  .editor-section-item .editor-section-btn { flex:1 1 auto; min-width:0; margin-bottom:0; }
+  .editor-section-toggle { flex:0 0 auto; border:1px solid var(--border); background:var(--paper); color:var(--ink-soft); border-radius:7px; padding:6px 7px; font-family:var(--font-body); font-size:10.5px; font-weight:700; letter-spacing:.02em; cursor:pointer; }
+  .editor-section-toggle:hover { border-color:var(--accent-dark); color:var(--accent-dark); background:#fff; }
+  .editor-section-item.is-hidden .editor-section-btn { opacity:.55; }
+  .editor-section-item.is-hidden .editor-section-name { text-decoration:line-through; }
+  .editor-section-item.is-hidden .editor-section-toggle { border-color:var(--accent-dark); color:var(--accent-dark); background:var(--accent-tint); }
+  .editor-form label { display:block; font-size:12px; font-weight:600; margin:12px 0 4px; color:var(--ink); }
+  .editor-form .item-card { border:1px solid var(--border); border-radius:10px; padding:12px; margin-bottom:10px; background:var(--paper); position:relative; }
+  .editor-form .item-card .remove-btn { position:absolute; top:8px; right:8px; background:var(--error-tint); color:var(--error); border:none; border-radius:6px; padding:4px 8px; font-size:11px; cursor:pointer; font-family:var(--font-body); font-weight:600; }
+  .editor-form .items-container.nested { margin:6px 0 8px; padding:10px 10px 4px; border-left:3px solid var(--accent-light); background:var(--card); border-radius:0 8px 8px 0; }
+  .editor-form .items-container.nested .item-card { background:var(--paper-warm); }
+  .editor-form .add-btn { background:var(--accent-tint); color:var(--accent-dark); border:1px dashed var(--accent-dark); padding:8px; border-radius:8px; font-size:13px; cursor:pointer; width:100%; margin-top:4px; font-family:var(--font-body); font-weight:600; }
+  .editor-form .add-btn:hover { background:var(--accent-light); }
+  .editor-form .img-preview { width:76px; height:76px; border-radius:10px; object-fit:cover; background:var(--paper); border:1px solid var(--border); display:block; }
+  .editor-form .img-preview.is-wide { width:120px; aspect-ratio:4/3; height:auto; }
+  .editor-note { font-size:12.5px; color:var(--ink-soft); }
+  .editor-subhead { font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft); margin:20px 0 8px; padding-top:14px; border-top:1px solid var(--border); }
+  .editor-colors { margin-top:4px; }
+  .editor-color-row { display:flex; align-items:center; gap:10px; margin-bottom:8px; }
+  .editor-color-label { flex:0 0 96px; font-size:12px; font-weight:600; color:var(--ink); margin:0; }
+  .editor-color-controls { display:flex; align-items:center; gap:8px; flex:1; }
+  .editor-color-swatch { width:34px; height:28px; padding:0; border:1px solid var(--border); border-radius:7px; background:none; cursor:pointer; }
+  .editor-color-swatch.is-default { opacity:.45; }
+  .editor-color-hex { flex:1; min-width:0; padding:6px 9px !important; font-size:12.5px !important; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
+  .editor-color-reset { border:1px solid var(--border); background:var(--paper); color:var(--ink-soft); border-radius:7px; padding:6px 9px; font-size:11.5px; font-weight:600; cursor:pointer; font-family:var(--font-body); }
+  .editor-color-reset:hover { border-color:var(--accent-dark); color:var(--accent-dark); }
+</style>
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2153303078555379');
+fbq('track', 'PageView');
+fbq('track', 'ViewContent', {content_name: 'profile-builder'});
+</script>
+</head>
+<body>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2153303078555379&ev=PageView&noscript=1"
+/></noscript>
+
+<header>
+    <div class="header-content">
+
+        <!-- Logo -->
+        <a href="../index.html" class="logo">
+            <span class="logo-icon">RP</span>
+            <span>ResumePro</span>
+        </a>
+
+        <!-- Nav + Hamburger -->
+        <div class="nav-container">
+            <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M3 5H17M3 10H17M3 15H17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+            </button>
+
+            <ul class="header-nav-menu" role="menubar">
+
+                <li class="header-nav-item" role="none">
+                    <a href="../index.html" class="header-nav-link" role="menuitem">Home</a>
+                </li>
+
+                <li class="header-nav-item header-dropdown" role="none">
+                    <a href="#" class="header-nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false">
+                        Templates
+                        <span class="header-dropdown-icon" aria-hidden="true">▾</span>
+                    </a>
+                    <div class="header-dropdown-content" role="menu">
+                        <a href="../resume-templates.html"   class="header-dropdown-item" role="menuitem">Resume Templates</a>
+                        <a href="../portfolio-templates.html" class="header-dropdown-item" role="menuitem">Portfolio Templates</a>
+                        <a href="../resume-builder/" class="header-dropdown-item" role="menuitem">AI Resume Builder</a>
+                        <a href="/portfolio-builder/" class="header-dropdown-item" role="menuitem">Portfolio Builder</a>
+                        <a href="/profile-builder/" class="header-dropdown-item" role="menuitem" aria-current="page">Profile Builder</a>
+                    </div>
+                </li>
+
+                <li class="header-nav-item header-dropdown" role="none">
+                    <a href="#" class="header-nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false">
+                        Apps
+                        <span class="header-dropdown-icon" aria-hidden="true">▾</span>
+                    </a>
+                    <div class="header-dropdown-content" role="menu">
+                        <a href="../android-applications.html"   class="header-dropdown-item" role="menuitem">Android Applications</a>
+                        <a href="../family-connection-tools.html" class="header-dropdown-item" role="menuitem">Web Applications</a>
+                    </div>
+                </li>
+
+                <li class="header-nav-item" role="none">
+                    <a href="../blog-list.html" class="header-nav-link" role="menuitem">Blog</a>
+                </li>
+
+                <li class="header-nav-item" role="none" style="display: none;">
+                    <a href="../klaviyo-analytics.html" class="header-nav-link" role="menuitem">Klaviyo Analytics</a>
+                </li>
+
+                <li class="header-nav-item header-dropdown" role="none">
+                    <a href="#" class="header-nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false">
+                        Tools
+                        <span class="header-dropdown-icon" aria-hidden="true">▾</span>
+                    </a>
+                    <div class="header-dropdown-content" role="menu">
+                        <a href="../email-builder.html"  class="header-dropdown-item" role="menuitem">Email Builder</a>
+                        <a href="../inliner.html"              class="header-dropdown-item" role="menuitem">Inliner</a>
+                        <a href="../klaviyo-tool.html"               class="header-dropdown-item" role="menuitem">Klaviyo Tool</a>
+                        <a href="../omnisend.html"                   class="header-dropdown-item" role="menuitem">Omnisend Analytics</a>
+                        <a href="../adg-customer-service-agent.html"   class="header-dropdown-item" role="menuitem">CS Agent</a>
+                        <a href="../campfire.html"   class="header-dropdown-item" role="menuitem">Campfire</a>
+                    </div>
+                </li>
+
+                <li class="header-nav-item" role="none">
+                    <a href="../about.html" class="header-nav-link" role="menuitem">About</a>
+                </li>
+
+                <li class="header-nav-item" role="none">
+                    <a href="../contact.html" class="header-nav-link" role="menuitem">Contact</a>
+                </li>
+                <li class="header-nav-item" role="none"><a href="../portfolio-builder/link-sites.html" class="header-nav-link" role="menuitem">Link Sites</a></li>
+
+            </ul>
+        </div>
+    </div>
+</header>
+
+<div class="page-content">
+<div class="brand-bar">
+  <div class="brand-mark"><span class="doc-icon">RP</span> ResumePro <span style="color:var(--ink-soft); font-weight:400; font-size:14px; margin-left:4px;">/ Profile Builder</span></div>
+  <span class="badge-pill">Your name, searchable</span>
+</div>
+
+<div class="wrap">
+  <div class="panel" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;">
+    <div>
+      <h1>Build your personal profile page</h1>
+      <div class="sub" style="margin:6px 0 0;">A page more than a resume: your work, services, skills, social links, a booking calendar and a Messenger form. Fill in the editor and publish it live — every page is built to be found by search engines.</div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap" style="margin-top:24px;">
+  <div class="panel" style="padding:16px 22px;">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+      <div>
+        <strong style="font-size:14.5px; color:var(--ink);">Already published a profile page?</strong>
+        <div class="sub" style="margin:3px 0 0;">Load it back into the editor — details, colours and theme included — instead of starting over. Loading and editing are free.</div>
+      </div>
+      <button type="button" class="secondary" id="restoreProfileToggle" style="white-space:nowrap;">Edit my existing profile</button>
+    </div>
+    <div id="restoreProfileBody" style="display:none; margin-top:14px; padding-top:14px; border-top:1px solid var(--border);">
+      <div id="restoreProfileRememberedWrap" style="display:none; margin-bottom:10px;">
+        <label for="restoreProfileSelect" style="font-size:12.5px; font-weight:600; color:var(--ink); display:block; margin-bottom:5px;">Sites published from this browser</label>
+        <select id="restoreProfileSelect"></select>
+      </div>
+      <label for="restoreProfileUrl" style="font-size:12.5px; font-weight:600; color:var(--ink); display:block; margin-bottom:5px;">Or paste your live profile link</label>
+      <div style="display:flex; gap:8px; flex-wrap:wrap;">
+        <input id="restoreProfileUrl" type="text" placeholder="https://resumepro.pages.dev/p/your-name" style="flex:1; min-width:240px; padding:9px 12px; border:1px solid var(--border); border-radius:8px; font-size:13.5px; background:var(--card); color:var(--ink);">
+        <button type="button" id="restoreProfileBtn" class="primary">Open in editor</button>
+      </div>
+      <div style="margin-top:8px; font-size:11.5px; color:var(--ink-soft);">Editing is free and needs no key. Your existing key is only needed when you publish the update.</div>
+      <div class="status" id="restoreProfileStatus"></div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap" style="margin-top:24px;">
+  <div class="panel price-note" style="padding:16px 24px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;">
+    <div>
+      <strong>Try it free.</strong> Build your profile and preview the result, no card required.<br>
+      <strong>Ready to publish?</strong> $15 one-time. Your key lets you publish and update your profile page whenever you need.
+      <div style="font-size:11.5px; color:var(--ink-soft); margin-top:4px; display:flex; align-items:center; gap:5px;">
+        <span>🔒 Secure checkout: <strong>GCash / QR Ph</strong> (Philippines) or <strong>Cards &amp; PayPal</strong> via Gumroad</span>
+      </div>
+    </div>
+    <a href="#" onclick="if(window.openPaymentOptionsModal){event.preventDefault();window.openPaymentOptionsModal();}return false;" style="display:inline-flex; align-items:center; gap:6px; background:#2563eb; color:#ffffff; padding:9px 18px; border-radius:8px; font-weight:700; font-size:13.5px; text-decoration:none; box-shadow:0 2px 4px rgba(37,99,235,0.2); white-space:nowrap;">
+      🔑 Buy Unlock Key ($15 / ₱880) →
+    </a>
+  </div>
+</div>
+
+<div class="wrap" style="margin-top:24px;">
+  <div class="panel">
+    <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:10px; margin-bottom:8px;">
+      <div>
+        <div class="step-head" style="margin-bottom:2px;"><span class="step-badge">1</span><h1>Pick a design</h1></div>
+        <div class="sub" style="margin:2px 0 0;">Choose the look of your profile page. All four show the same content.</div>
+      </div>
+    </div>
+
+    <div class="tpl-select-label">
+      <label for="templateSelect">Template design</label>
+      <span class="tpl-select-hint">Choose from 4 designs in the dropdown ▾</span>
+    </div>
+    <select id="templateSelect">
+      <option value="style1">Identity — warm and centred</option>
+      <option value="style2">Editorial — magazine layout</option>
+      <option value="style3">Spotlight — dark and bold</option>
+      <option value="style4">Quiet — minimal and typographic</option>
+    </select>
+
+    <div id="templateQuickPreviewBar" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; margin-top:10px; padding:10px 14px; background:var(--paper-warm, #f8fafc); border:1px solid var(--border); border-radius:8px;">
+      <div style="display:flex; align-items:center; gap:10px; font-size:13px;">
+        <span style="display:inline-flex; align-items:center; justify-content:center; width:34px; height:34px; border-radius:6px; background:#fff; border:1px solid var(--border); overflow:hidden; flex-shrink:0;">
+          <img id="quickPreviewThumb" src="" alt="" style="width:100%; height:100%; object-fit:cover; display:none;" onerror="this.style.display='none'">
+        </span>
+        <div>
+          <span style="color:var(--ink-soft); font-size:11.5px; display:block; line-height:1.2;">Selected Design:</span>
+          <strong id="quickPreviewSelectedName" style="color:var(--ink); font-size:13.5px;">Identity</strong>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:8px;">
+        <button type="button" id="openTemplateQuickPreviewBtn" style="display:inline-flex; align-items:center; gap:6px; background:#2563eb; color:#ffffff; border:none; padding:7px 15px; border-radius:6px; font-size:12.5px; font-weight:600; cursor:pointer; transition:all 0.15s ease; box-shadow:0 1px 3px rgba(37,99,235,0.2);">
+          👁️ View This Template
+        </button>
+      </div>
+    </div>
+
+    <div style="margin-top:16px;">
+      <button class="primary" id="generateBtnTop" type="button">Generate My Profile</button>
+      <div class="status" id="genStatusTop"></div>
+    </div>
+
+    <!-- Background & Color Theme Customization -->
+    <div style="margin-top:20px; padding-top:16px; border-top:1px solid var(--border);">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+        <label style="font-size:13px; font-weight:600; color:var(--ink); margin:0;">
+          Nav, hero &amp; footer color
+        </label>
+        <span style="font-size:12px; color:var(--ink-soft);">Applies to live preview &amp; site files</span>
+      </div>
+      <div class="sub" style="margin-top:2px; margin-bottom:8px;">Only the nav, hero and footer change — the rest of the page keeps its design.</div>
+      <div class="theme-swatch-grid" id="themePickerGrid">
+        <button type="button" class="theme-pill active" data-theme-id="default">
+          <span class="theme-circle" style="background:linear-gradient(135deg, #e2e8f0 50%, #94a3b8 50%);"></span>
+          <span>Default</span>
+        </button>
+        <button type="button" class="theme-pill" data-theme-id="dark-slate">
+          <span class="theme-circle" style="background:linear-gradient(135deg, #0f172a 60%, #38bdf8 60%);"></span>
+          <span>Dark Slate</span>
+        </button>
+        <button type="button" class="theme-pill" data-theme-id="clean-light">
+          <span class="theme-circle" style="background:linear-gradient(135deg, #ffffff 60%, #2563eb 60%);"></span>
+          <span>Clean Light</span>
+        </button>
+        <button type="button" class="theme-pill" data-theme-id="executive-navy">
+          <span class="theme-circle" style="background:linear-gradient(135deg, #0a192f 60%, #64ffda 60%);"></span>
+          <span>Executive Navy</span>
+        </button>
+        <button type="button" class="theme-pill" data-theme-id="warm-linen">
+          <span class="theme-circle" style="background:linear-gradient(135deg, #fdfbf7 60%, #c2410c 60%);"></span>
+          <span>Warm Linen</span>
+        </button>
+        <button type="button" class="theme-pill" data-theme-id="emerald">
+          <span class="theme-circle" style="background:linear-gradient(135deg, #064e3b 60%, #34d399 60%);"></span>
+          <span>Emerald</span>
+        </button>
+        <button type="button" class="theme-pill" data-theme-id="amethyst">
+          <span class="theme-circle" style="background:linear-gradient(135deg, #1e1b4b 60%, #a855f7 60%);"></span>
+          <span>Amethyst</span>
+        </button>
+        <button type="button" class="theme-pill" data-theme-id="custom">
+          <span class="theme-circle" style="background:conic-gradient(#f43f5e, #eab308, #22c55e, #06b6d4, #6366f1, #a855f7, #f43f5e);"></span>
+          <span>Custom...</span>
+        </button>
+      </div>
+
+      <!-- Custom Color Inputs (revealed when 'Custom...' is selected) -->
+      <div id="customColorBox" style="display:none; margin-top:12px; padding:14px 16px; background:var(--paper-warm); border-radius:10px; border:1px solid var(--border);">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+          <span style="font-size:12px; font-weight:700; color:var(--ink); text-transform:uppercase; letter-spacing:0.04em;">Custom Palette &amp; Text</span>
+          <div style="display:flex; gap:6px;">
+            <button type="button" id="quickLightTextBtn" style="background:var(--card); border:1px solid var(--border); border-radius:4px; padding:2px 8px; font-size:11px; cursor:pointer; font-weight:600; color:var(--ink);">🌙 Light Text</button>
+            <button type="button" id="quickDarkTextBtn" style="background:var(--card); border:1px solid var(--border); border-radius:4px; padding:2px 8px; font-size:11px; cursor:pointer; font-weight:600; color:var(--ink);">☀️ Dark Text</button>
+          </div>
+        </div>
+        <div style="display:flex; gap:16px; flex-wrap:wrap; align-items:center;">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <label for="customBgStart" style="font-size:12px; color:var(--ink-soft);">Background 1:</label>
+            <input type="color" id="customBgStart" value="#0f172a" style="border:none; width:30px; height:30px; border-radius:6px; cursor:pointer; background:none;">
+            <span id="customBgStartVal" style="font-family:monospace; font-size:11px; color:var(--ink-soft);">#0f172a</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px;">
+            <label for="customBgEnd" style="font-size:12px; color:var(--ink-soft);">Background 2:</label>
+            <input type="color" id="customBgEnd" value="#1e293b" style="border:none; width:30px; height:30px; border-radius:6px; cursor:pointer; background:none;">
+            <span id="customBgEndVal" style="font-family:monospace; font-size:11px; color:var(--ink-soft);">#1e293b</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px;">
+            <label for="customTextColor" style="font-size:12px; color:var(--ink-soft); font-weight:600;">Text Color:</label>
+            <input type="color" id="customTextColor" value="#f8fafc" style="border:none; width:30px; height:30px; border-radius:6px; cursor:pointer; background:none;">
+            <span id="customTextColorVal" style="font-family:monospace; font-size:11px; color:var(--ink-soft);">#f8fafc</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px;">
+            <label for="customAccent" style="font-size:12px; color:var(--ink-soft);">Accent:</label>
+            <input type="color" id="customAccent" value="#38bdf8" style="border:none; width:30px; height:30px; border-radius:6px; cursor:pointer; background:none;">
+            <span id="customAccentVal" style="font-family:monospace; font-size:11px; color:var(--ink-soft);">#38bdf8</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION EDITOR: structure | live preview | properties -->
+<div class="wrap editor-wrap" style="margin-top:24px;">
+  <div class="panel" style="padding:0; overflow:hidden;">
+    <div class="step-head" style="padding:20px 22px 0; margin-bottom:0;">
+      <span class="step-badge">2</span><h1>Edit section by section</h1>
+    </div>
+    <div class="sub" style="padding:0 22px 16px;">
+      Pick a section on the left, or click it directly in the preview. Empty sections stay visible so you can see what is still missing.
+    </div>
+    <div class="editor-grid">
+      <aside class="editor-rail" id="editorStructure">
+        <div class="editor-panel-head">Sections</div>
+      </aside>
+      <section class="editor-canvas">
+        <div class="editor-canvas-head">
+          <strong id="editorCanvasTitle">Live preview</strong>
+          <span class="editor-canvas-hint">Click a section in the preview to select it</span>
+        </div>
+        <div class="editor-canvas-body">
+          <iframe id="editorPreview" title="Profile preview" sandbox="allow-scripts allow-popups allow-forms allow-downloads"></iframe>
+        </div>
+      </section>
+      <aside class="editor-properties">
+        <div class="editor-panel-head">Details</div>
+        <form id="resumeForm" class="editor-form"></form>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<div class="wrap two-col" style="margin-top:24px;">
+
+  <div class="panel">
+    <div class="step-head"><span class="step-badge">3</span><h1>Generate your page</h1></div>
+    <div class="sub">When your details look right, generate the page. Previewing is free — you only need a key to publish or download it.</div>
+    <button class="primary" id="generateBtn" type="button">Generate My Profile</button>
+    <div class="status" id="genStatus"></div>
+  </div>
+
+  <div class="panel">
+    <div class="step-head"><span class="step-badge">4</span><h1>Your page</h1></div>
+
+    <div class="sub" id="resultEmpty">Your page preview will open here after you click <strong>Generate My Profile</strong>. Previewing is free.</div>
+
+    <!-- Kept for the code, hidden from customers by the CSS above -->
+    <div class="json-box" id="resultBox"></div>
+    <button class="secondary" id="downloadJsonBtn" style="display:none; margin-top:10px;">Download website data</button>
+
+    <div id="resultActions" style="display:none;">
+      <div class="sub">Your website is ready. Looks good? Publish it for $15 one-time.</div>
+
+      <div style="margin:12px 0 4px; font-size:12px; color:var(--ink-soft); display:flex; align-items:center; gap:6px;">
+        <span>Color theme:</span>
+        <span id="activeThemeBadge" style="font-weight:600; color:var(--ink); padding:2px 8px; border-radius:999px; background:var(--paper-warm); border:1px solid var(--border);">Default</span>
+        <span style="font-size:11px;">(change it in Step 1 or inside the preview)</span>
+      </div>
+
+      <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+        <button class="primary" id="publishBtn" type="button">Publish My Website — $15</button>
+        <button class="secondary" id="previewBtn" type="button">View Preview</button>
+        <a href="#" id="step3BuyKeyBtn" onclick="if(window.openPaymentOptionsModal){event.preventDefault();window.openPaymentOptionsModal();}return false;" style="display:inline-flex; align-items:center; gap:6px; background:#10b981; color:#ffffff; padding:9px 16px; border-radius:8px; font-weight:700; font-size:13px; text-decoration:none; border:1px solid #059669; box-shadow:0 1px 3px rgba(0,0,0,0.1);">
+          🔑 Buy Unlock Key ($15 / ₱880)
+        </a>
+        <button class="secondary" id="editInfoBtn" type="button">Edit Information</button>
+        <button class="secondary" id="downloadSiteBtn" type="button">Download Website</button>
+      </div>
+    </div>
+
+    <div class="status" id="previewStatus"></div>
+    <div class="status" id="publishStatus"></div>
+    <div id="publishResult" style="margin-top:8px;"></div>
+    <div id="previewContainer" style="margin-top:12px;"></div>
+  </div>
+</div>
+</div>
+<footer>
+    <div class="footer-content">
+        <div class="footer-column">
+            <h3>ResumePro</h3>
+            <p>Professional digital templates to showcase your career and work.</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Templates</h3>
+            <ul class="footer-links">
+                <li><a href="../resume-templates.html">Resume Templates</a></li>
+                <li><a href="../portfolio-templates.html">Portfolio Templates</a></li>
+                <li><a href="../profile-templates.html">Profile Templates</a></li>
+                <li><a href="#">All Templates</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Resources</h3>
+            <ul class="footer-links">
+                <li><a href="../resume-builder/help.html#editing">How to Edit</a></li>
+                <li><a href="../resume-builder/help.html#hosting">Hosting Guide</a></li>
+                <li><a href="../resume-builder/help.html#tips">Tips & Examples</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Company</h3>
+            <ul class="footer-links">
+                <li><a href="../about.html">About Us</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+                <li><a href="../privacy.html">Privacy Policy</a></li>
+                <li><a href="../terms.html">Terms of Service</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>&copy; 2026 ResumePro Templates. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="mapping-engine.js"></script>
+<script src="site-import.js"></script>
+<script src="draft-store.js"></script>
+<script>
+let MASTER_SCHEMA = null;
+let MAPPINGS = null;
+let ALL_TEMPLATE_SCHEMAS = null;
+let profileImageDataUri = '';
+// Per-field uploads (keyed by master path). profileImage keeps its legacy
+// global above; every other image field stores its data URI here.
+const imageDataUris = {};
+let lastResult = null;
+
+const formEl = document.getElementById('resumeForm');
+const templateSelect = document.getElementById('templateSelect');
+
+// --- Load config files ---
+Promise.all([
+  fetch('profile-master-schema.json').then(r => r.json()),
+  fetch('profile-mappings.json').then(r => r.json()),
+  fetch('all_template_schemas.json').then(r => r.json())
+]).then(async ([schema, mappings, allSchemas]) => {
+  MASTER_SCHEMA = schema;
+  MAPPINGS = mappings;
+  ALL_TEMPLATE_SCHEMAS = allSchemas;
+
+  // Designs can be linked directly as ?template=style3 (e.g. from a template gallery).
+  const requested = new URLSearchParams(window.location.search).get('template');
+  if (requested && [...templateSelect.options].some(o => o.value === requested)) {
+    templateSelect.value = requested;
+  }
+
+  // The section editor replaces the flat form; fall back to the flat form if
+  // the editor script failed to load. The ready promise is normally created by
+  // a later script block; define it here too for the rare ordering where the
+  // config fetches resolve before that block has been parsed.
+  if (!window.__rpEditorReady) {
+    window.__rpEditorReady = new Promise(function (resolve) {
+      window.__rpEditorResolve = resolve;
+      setTimeout(function () { resolve(!!window.ProfileEditor); }, 4000);
+    });
+  }
+  await window.__rpEditorReady;
+  var editorReady = window.ProfileEditor &&
+    (window.ProfileEditor.isActive() || window.ProfileEditor.init());
+  if (!editorReady) renderForm();
+  initProfileDrafts();
+  initProfileRestore();
+}).catch(err => {
+  console.error(err);
+  document.getElementById('genStatus').textContent = 'Could not load the builder. Please refresh the page and try again.';
+  document.getElementById('genStatus').className = 'status error';
+});
+
+// ── Saved drafts ──────────────────────────────────────────────────────────
+function currentProfileDraft() {
+  const canonical = (window.ProfileEditor && window.ProfileEditor.isActive())
+    ? window.ProfileEditor.getCanonical()
+    : collectFormData();
+  return {
+    template: templateSelect.value,
+    canonical: canonical,
+    photo: profileImageDataUri || '',
+    generated: !!lastResult,
+    // Publish stores the id under the full template key ("profile/style1"),
+    // so the draft has to read the same sanitized key.
+    siteId: localStorage.getItem('publishedProfileId_profile_' + templateSelect.value) || '',
+    theme: (typeof currentThemeData !== 'undefined' && currentThemeData) || null,
+    themeId: (typeof currentThemeId !== 'undefined' && currentThemeId) || 'default'
+  };
+}
+
+function populateFallbackForm(data) {
+  formEl.querySelectorAll('.master-field').forEach(input => {
+    const value = getPath(data, input.dataset.path);
+    if (value !== undefined && value !== null) input.value = value;
+  });
+  formEl.querySelectorAll('[data-repeatable-path]').forEach(section => {
+    const path = section.dataset.repeatablePath;
+    const field = MASTER_SCHEMA.find(f => f.path === path);
+    const container = section.querySelector('.items-container');
+    if (!field || !container) return;
+    container.innerHTML = '';
+    const items = getPath(data, path);
+    if (Array.isArray(items) && items.length) items.forEach(item => addRepeatableItem(container, field, item));
+    else addRepeatableItem(container, field);
+  });
+}
+
+function applyProfileTheme(record) {
+  if (!record || (!record.theme && !record.themeId)) return;
+  try {
+    if (record.theme && typeof window.selectTheme === 'function') {
+      window.selectTheme(record.themeId || 'custom', record.theme);
+    } else if (record.theme) {
+      window.userSelectedTheme = record.theme;
+    }
+  } catch (e) { /* theme is optional */ }
+}
+
+// Applies a draft/restored record to the live editor. Used both by the
+// "saved draft" banner and by "Edit my existing profile".
+function applyProfileRecord(record, message) {
+  if (record.template && [...templateSelect.options].some(o => o.value === record.template)) {
+    templateSelect.value = record.template;
+    templateSelect.dispatchEvent(new Event('change'));
+  }
+  applyProfileTheme(record);
+  if (record.canonical) {
+    if (window.ProfileEditor && window.ProfileEditor.isActive()) window.ProfileEditor.setCanonical(record.canonical);
+    else populateFallbackForm(record.canonical);
+  }
+  if (record.photo && !profileImageDataUri) profileImageDataUri = record.photo;
+  const statusEl = document.getElementById('genStatus');
+  if (statusEl) {
+    statusEl.textContent = message || 'Your saved draft was restored. Edit anything, then generate your page again.';
+    statusEl.className = 'status success';
+  }
+  // Persist the restored state, so a refresh right after is harmless.
+  if (window.RPDrafts) window.RPDrafts.schedule();
+  const rail = document.getElementById('editorStructure');
+  if (rail) rail.scrollIntoView({ block: 'start' });
+}
+
+function initProfileDrafts() {
+  if (!window.RPDrafts) return;
+  window.RPDrafts.boot({
+    kind: 'profile',
+    getRecord: currentProfileDraft,
+    labelFor: function (style) {
+      const opt = templateSelect.querySelector('option[value="' + style + '"]');
+      return opt ? opt.textContent.trim() : '';
+    },
+    onContinue: function (record) {
+      applyProfileRecord(record);
+    }
+  });
+}
+
+// ── Edit an existing published profile ───────────────────────────────────
+// Profile sites publish the canonical shape, so loading one back is a direct
+// read through /api/site-data: no reverse-mapping needed.
+function rememberedProfileSites() {
+  const found = [];
+  const add = function (id, style) {
+    if (!id || found.some(s => s.id === id)) return;
+    found.push({ id: id, style: style || '' });
+  };
+  try {
+    const pairs = JSON.parse(localStorage.getItem('rpSites') || '{}');
+    if (pairs && pairs.profile && pairs.profile.id) add(pairs.profile.id);
+  } catch (e) { /* ignore */ }
+  try {
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      const match = key && key.match(/^publishedProfileId_profile_(style\d+)$/);
+      if (match) add(localStorage.getItem(key), match[1]);
+    }
+  } catch (e) { /* ignore */ }
+  return found;
+}
+
+function profileStyleLabel(style) {
+  const opt = templateSelect && templateSelect.querySelector('option[value="' + style + '"]');
+  if (!opt) return style || '';
+  return opt.textContent.trim().split('—')[0].trim();
+}
+
+function initProfileRestore() {
+  const toggle = document.getElementById('restoreProfileToggle');
+  const body = document.getElementById('restoreProfileBody');
+  const select = document.getElementById('restoreProfileSelect');
+  const wrap = document.getElementById('restoreProfileRememberedWrap');
+  const input = document.getElementById('restoreProfileUrl');
+  const btn = document.getElementById('restoreProfileBtn');
+  const statusEl = document.getElementById('restoreProfileStatus');
+  const importer = window.RPSiteImport;
+  if (!toggle || !body || !select || !wrap || !input || !btn || !statusEl || !importer) return;
+
+  const setStatus = function (text, kind) {
+    statusEl.textContent = text || '';
+    statusEl.className = 'status' + (kind ? ' ' + kind : '');
+  };
+
+  const loadDrafts = function () {
+    if (!window.RPDrafts) return Promise.resolve([]);
+    return window.RPDrafts.list('profile').catch(() => []);
+  };
+
+  const fillRemembered = function (records) {
+    let known = rememberedProfileSites();
+    (records || []).forEach(r => { if (r && r.siteId) known.push({ id: r.siteId, style: r.template }); });
+    const seen = {};
+    known = known.filter(s => {
+      if (!s.id || seen[s.id]) return false;
+      seen[s.id] = true;
+      return true;
+    });
+    if (!known.length) { wrap.style.display = 'none'; return; }
+    select.innerHTML = '<option value="">Choose a published profile…</option>' + known.map(s => {
+      const label = s.style ? profileStyleLabel(s.style) : '';
+      return '<option value="' + s.id + '">' + (label ? label + ' · ' : '') + s.id + '</option>';
+    }).join('');
+    wrap.style.display = '';
+  };
+
+  toggle.addEventListener('click', function () {
+    const open = body.style.display === 'none' || !body.style.display;
+    body.style.display = open ? 'block' : 'none';
+    toggle.textContent = open ? 'Hide editor' : 'Edit my existing profile';
+    if (open && !select.options.length) loadDrafts().then(fillRemembered);
+  });
+
+  select.addEventListener('change', function () {
+    if (select.value) input.value = select.value;
+  });
+
+  let busy = false;
+  async function openSite() {
+    if (busy) return;
+    const raw = (input.value || '').trim() || select.value || '';
+    const id = importer.parseSiteId(raw);
+    if (!id) {
+      setStatus('Paste the link we gave you when you published (e.g. https://resumepro.pages.dev/p/your-name) or just the site name.', 'error');
+      return;
+    }
+    if (importer.siteKind(id) !== 'profile') {
+      setStatus('That is not a profile link. Use the builder that published it and its “Edit my existing…” button.', 'error');
+      return;
+    }
+
+    busy = true;
+    const previousText = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Loading…';
+    setStatus('Looking up your published profile…');
+
+    try {
+      const records = await loadDrafts();
+      const localDraft = (records || []).filter(r => r && r.siteId === id)[0];
+      if (localDraft) {
+        // The saved draft is this browser's most recent state of that same
+        // site; the live copy stays untouched until the person publishes.
+        applyProfileRecord(localDraft, 'Opened your saved work for this profile site — it may be newer than the live copy. Edit anything, then publish to update it.');
+        setStatus('Opened your saved work in the editor below.', 'success');
+        return;
+      }
+
+      const site = await importer.fetchSite(id);
+      const parsed = importer.profileFromData(site.data);
+      if (!parsed) {
+        setStatus('That profile loaded but had no details we could fill in. If it looks fine on the live site, republish it from the builder and try again.', 'error');
+        return;
+      }
+
+      const themeRecord = importer.themeFromData(site.data, typeof THEME_PRESETS !== 'undefined' ? THEME_PRESETS : null);
+      const style = parsed.style || templateSelect.value;
+
+      if (typeof setPublishedProfileId === 'function') {
+        setPublishedProfileId('profile/' + style, id);
+      } else {
+        try {
+          localStorage.setItem('publishedProfileId_profile_' + style, id);
+        } catch (e) { /* ignore */ }
+      }
+
+      applyProfileRecord({
+        template: style,
+        canonical: parsed.canonical,
+        photo: typeof parsed.canonical.profileImage === 'string' ? parsed.canonical.profileImage : '',
+        theme: themeRecord && themeRecord.theme,
+        themeId: themeRecord ? themeRecord.id : 'default'
+      }, parsed.style
+        ? 'Loaded your published profile. Edit anything, then publish to update your live page.'
+        : 'Loaded your published profile, but it predates the design marker — check the design dropdown and pick the look you want; your details are kept.');
+      setStatus('Opened in the editor below.', 'success');
+    } catch (err) {
+      setStatus(err && err.message ? err.message : 'Could not load that profile just now. Try again in a minute.', 'error');
+    } finally {
+      busy = false;
+      btn.disabled = false;
+      btn.textContent = previousText;
+    }
+  }
+
+  btn.addEventListener('click', openSite);
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') { e.preventDefault(); openSite(); }
+  });
+}
+
+// --- Flat form rendering (fallback when the editor is unavailable) ---
+function renderForm() {
+  if (window.ProfileEditor && window.ProfileEditor.isActive()) return;
+  formEl.innerHTML = '';
+  let currentSection = null;
+  let sectionDiv = null;
+
+  MASTER_SCHEMA.forEach(field => {
+    if (field.section !== currentSection) {
+      currentSection = field.section;
+      const h2 = document.createElement('h2');
+      h2.textContent = currentSection;
+      formEl.appendChild(h2);
+      sectionDiv = document.createElement('div');
+      formEl.appendChild(sectionDiv);
+    }
+
+    if (field.type === 'image') {
+      sectionDiv.appendChild(buildImageField(field));
+    } else if (field.type === 'repeatable') {
+      sectionDiv.appendChild(buildRepeatableField(field));
+    } else {
+      sectionDiv.appendChild(buildSimpleField(field));
+    }
+  });
+}
+
+function buildSimpleField(field) {
+  const wrap = document.createElement('div');
+  const label = document.createElement('label');
+  label.textContent = field.label;
+  wrap.appendChild(label);
+  const input = field.type === 'textarea' ? document.createElement('textarea') : document.createElement('input');
+  if (field.type !== 'textarea') input.type = 'text';
+  input.dataset.path = field.path;
+  input.className = 'master-field';
+  wrap.appendChild(input);
+  return wrap;
+}
+
+function buildImageField(field) {
+  const wrap = document.createElement('div');
+  const label = document.createElement('label');
+  label.textContent = field.label;
+  wrap.appendChild(label);
+
+  const row = document.createElement('div');
+  row.className = 'img-upload';
+  const img = document.createElement('img');
+  img.className = 'img-preview';
+  if (field.path !== 'profileImage') img.classList.add('is-wide');
+  img.id = field.path === 'profileImage' ? 'profileImagePreview' : field.path + 'Preview';
+  const input = document.createElement('input');
+  input.type = 'file';
+  input.accept = 'image/*';
+  input.id = field.path + 'Upload';
+  input.addEventListener('change', async () => {
+    const file = input.files[0];
+    if (!file) return;
+    const uri = await fileToDataUri(file);
+    imageDataUris[field.path] = uri;
+    if (field.path === 'profileImage') profileImageDataUri = uri;
+    img.src = uri;
+    // Let the editor commit the new value and repaint the preview.
+    input.dispatchEvent(new Event('input', { bubbles: true }));
+  });
+  row.appendChild(img);
+  row.appendChild(input);
+  wrap.appendChild(row);
+  return wrap;
+}
+
+function fileToDataUri(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = reject;
+    reader.readAsDataURL(file);
+  });
+}
+
+function buildRepeatableField(field) {
+  const wrap = document.createElement('div');
+  wrap.dataset.repeatablePath = field.path;
+
+  const label = document.createElement('label');
+  label.textContent = field.label;
+  wrap.appendChild(label);
+
+  const itemsContainer = document.createElement('div');
+  itemsContainer.className = 'items-container';
+  wrap.appendChild(itemsContainer);
+
+  const addBtn = document.createElement('button');
+  addBtn.type = 'button';
+  addBtn.className = 'add-btn';
+  addBtn.textContent = `+ Add ${field.label.replace(/s$/, '')}`;
+  addBtn.addEventListener('click', () => addRepeatableItem(itemsContainer, field));
+  wrap.appendChild(addBtn);
+
+  if (!field.optional) addRepeatableItem(itemsContainer, field);
+
+  return wrap;
+}
+
+function addRepeatableItem(container, field, values) {
+  const card = document.createElement('div');
+  card.className = 'item-card';
+
+  const removeBtn = document.createElement('button');
+  removeBtn.type = 'button';
+  removeBtn.className = 'remove-btn';
+  removeBtn.textContent = 'Remove';
+  removeBtn.addEventListener('click', () => card.remove());
+  card.appendChild(removeBtn);
+
+  field.itemFields.forEach(itemField => {
+    if (itemField.type === 'repeatable') {
+      // Nested list: a work section holds its own projects.
+      const nested = document.createElement('div');
+      nested.className = 'items-container nested';
+      nested.dataset.nestedFor = itemField.path;
+      const nestedLabel = document.createElement('label');
+      nestedLabel.textContent = itemField.label;
+      card.appendChild(nestedLabel);
+      card.appendChild(nested);
+      const nestedAdd = document.createElement('button');
+      nestedAdd.type = 'button';
+      nestedAdd.className = 'add-btn';
+      nestedAdd.textContent = `+ Add ${itemField.label.replace(/s$/, '').replace(/^projects/i, 'project')}`;
+      nestedAdd.addEventListener('click', () => addRepeatableItem(nested, itemField));
+      card.appendChild(nestedAdd);
+      const existing = values && Array.isArray(values[itemField.path]) ? values[itemField.path] : [];
+      existing.forEach(sub => addRepeatableItem(nested, itemField, sub));
+      if (!existing.length && !itemField.optional) addRepeatableItem(nested, itemField);
+      return;
+    }
+
+    const l = document.createElement('label');
+    l.textContent = itemField.label;
+    card.appendChild(l);
+
+    let input;
+    if (itemField.type === 'image') {
+      input = document.createElement('input');
+      input.type = 'file';
+      input.accept = 'image/*';
+      input.className = 'item-field item-image';
+      input.dataset.itemField = itemField.path;
+      const preview = document.createElement('img');
+      preview.className = 'item-image-preview';
+      preview.alt = '';
+      preview.style.cssText = 'display:none;max-width:120px;border-radius:6px;margin-top:6px;';
+      input.addEventListener('change', async () => {
+        const file = input.files && input.files[0];
+        if (!file) return;
+        input.dataset.dataUri = await fileToDataUri(file);
+        preview.src = input.dataset.dataUri;
+        preview.style.display = 'block';
+      });
+      if (values && values[itemField.path]) {
+        input.dataset.dataUri = values[itemField.path];
+        preview.src = values[itemField.path];
+        preview.style.display = 'block';
+      }
+      card.appendChild(input);
+      card.appendChild(preview);
+      return;
+    }
+
+    if (itemField.type === 'textarea' || itemField.type === 'textarea-lines') {
+      input = document.createElement('textarea');
+    } else {
+      input = document.createElement('input');
+      input.type = itemField.type === 'number' ? 'number' : 'text';
+    }
+    input.dataset.itemField = itemField.path;
+    input.className = 'item-field';
+    if (values && values[itemField.path] !== undefined) {
+      const v = values[itemField.path];
+      input.value = itemField.type === 'textarea-lines' && Array.isArray(v) ? v.join('\n') : v;
+    }
+    card.appendChild(input);
+  });
+
+  container.appendChild(card);
+}
+
+// Read a repeatable's cards back into plain items (nested lists included).
+function collectRepeatableItems(wrap, def) {
+  // `wrap` is the field wrapper at the top level, but the container itself
+  // when recursing into a nested list.
+  const container = wrap.classList && wrap.classList.contains('items-container')
+    ? wrap
+    : wrap.querySelector(':scope > .items-container');
+  if (!container) return [];
+  const items = [];
+  container.querySelectorAll(':scope > .item-card').forEach(card => {
+    const item = {};
+    def.itemFields.forEach(itemField => {
+      if (itemField.type === 'repeatable') {
+        const nested = card.querySelector(`[data-nested-for="${itemField.path}"]`);
+        if (nested) item[itemField.path] = collectRepeatableItems(nested, itemField);
+        return;
+      }
+      const input = card.querySelector(`[data-item-field="${itemField.path}"]`);
+      if (!input) return;
+      if (itemField.type === 'image') {
+        item[itemField.path] = input.dataset.dataUri || '';
+        return;
+      }
+      let val = input.value.trim();
+      if (itemField.type === 'number') val = val ? Number(val) : 0;
+      if (itemField.type === 'textarea-lines') val = val.split('\n').map(s => s.trim()).filter(Boolean);
+      item[itemField.path] = val;
+    });
+    items.push(item);
+  });
+  return items;
+}
+
+// --- Collect form data into master schema shape ---
+function collectFormData() {
+  // In the editor, the canonical model is the source of truth.
+  if (window.ProfileEditor && window.ProfileEditor.isActive()) {
+    return window.ProfileEditor.getCanonical();
+  }
+  const data = {};
+
+  formEl.querySelectorAll('.master-field').forEach(input => {
+    setPath(data, input.dataset.path, input.value.trim());
+  });
+
+  formEl.querySelectorAll('[data-repeatable-path]').forEach(section => {
+    const path = section.dataset.repeatablePath;
+    const field = MASTER_SCHEMA.find(f => f.path === path);
+    const items = collectRepeatableItems(section, field);
+    setPath(data, path, items);
+  });
+
+  if (profileImageDataUri) data.profileImage = profileImageDataUri;
+  MASTER_SCHEMA.forEach(field => {
+    if (field.type === 'image' && imageDataUris[field.path]) {
+      setPath(data, field.path, imageDataUris[field.path]);
+    }
+  });
+
+  return data;
+}
+
+// --- Generate final data.json via the mapping engine (deterministic) ---
+document.getElementById('generateBtnTop').addEventListener('click', () => {
+  document.getElementById('generateBtn').click();
+});
+(function mirrorGenStatus() {
+  const src = document.getElementById('genStatus');
+  const dst = document.getElementById('genStatusTop');
+  new MutationObserver(() => {
+    dst.textContent = src.textContent;
+    dst.className = src.className;
+  }).observe(src, { childList: true, characterData: true, subtree: true, attributes: true });
+})();
+
+document.getElementById('generateBtn').addEventListener('click', async () => {
+  const statusEl = document.getElementById('genStatus');
+  const styleKey = templateSelect.value;
+  const mapping = MAPPINGS && MAPPINGS[styleKey];
+  const originalTemplateData = ALL_TEMPLATE_SCHEMAS && ALL_TEMPLATE_SCHEMAS.profile_templates[styleKey];
+
+  if (!mapping || !originalTemplateData) {
+    statusEl.textContent = 'This design is not available yet. Please choose another one.';
+    statusEl.className = 'status error';
+    return;
+  }
+
+  const requiredCheck = collectFormData();
+  const missingRequired = (MASTER_SCHEMA || []).filter(f => f.required && !getPath(requiredCheck, f.path));
+  if (missingRequired.length) {
+    const names = missingRequired.map(f => (f.label || f.path).toLowerCase()).join(', ');
+    statusEl.textContent = `Please fill in your ${names} first.`;
+    statusEl.className = 'status error';
+    if (window.ProfileEditor && window.ProfileEditor.isActive()) {
+      window.ProfileEditor.focusField(missingRequired[0].path);
+    }
+    return;
+  }
+
+  const generateBtnEl = document.getElementById('generateBtn');
+  const generateBtnTopEl = document.getElementById('generateBtnTop');
+  generateBtnEl.classList.add('is-loading');
+  if (generateBtnTopEl) generateBtnTopEl.classList.add('is-loading');
+  statusEl.textContent = 'Building your page…';
+  statusEl.className = 'status';
+
+  try {
+    const masterData = collectFormData();
+    const result = applyMapping(masterData, originalTemplateData, mapping);
+
+    // The demo person's name lives in different fields per design; replace it
+    // with the name the user typed so no sample identity reaches the site.
+    swapProfileSampleNames(result, originalTemplateData, masterData.fullName || '');
+
+    // The published page records its own design so "Edit my existing
+    // profile" can reopen it without guessing.
+    result.rpTemplate = 'profile/' + styleKey;
+
+    lastResult = result;
+    const activeTheme = (typeof currentThemeData !== 'undefined' && currentThemeData) || window.userSelectedTheme;
+    if (activeTheme) {
+      lastResult.theme = JSON.parse(JSON.stringify(activeTheme));
+    }
+    window.lastResult = lastResult;
+    document.getElementById('resultBox').textContent = JSON.stringify(lastResult, null, 2);
+
+    statusEl.textContent = 'Your page is ready.';
+    statusEl.className = 'status success';
+    document.getElementById('resultEmpty').style.display = 'none';
+    document.getElementById('resultActions').style.display = 'block';
+
+    document.getElementById('previewBtn').click();   // opens the live preview automatically
+    if (window.RPDrafts) window.RPDrafts.schedule();
+  } catch (err) {
+    console.error(err);
+    statusEl.textContent = 'Something went wrong while building your page. Please check your details and try again.';
+    statusEl.className = 'status error';
+  } finally {
+    generateBtnEl.classList.remove('is-loading');
+    if (generateBtnTopEl) generateBtnTopEl.classList.remove('is-loading');
+  }
+});
+
+/** Replace whatever is left of the design's demo identity with the user's name. */
+function swapProfileSampleNames(node, schema, userName) {
+  if (!node || typeof node !== 'object') return;
+  const names = [];
+  ['fullName', 'logo', 'siteName', 'basicInfo.logo', 'siteDetails.logo', 'basicInfo.title'].forEach(p => {
+    const v = getPath(schema, p);
+    if (typeof v === 'string' && v.trim()) names.push(v.trim());
+  });
+  ['copyright', 'copyrightText'].forEach(p => {
+    const v = getPath(schema, p);
+    if (typeof v !== 'string') return;
+    const m = v.match(/\u00a9\s*(?:\d{4}|\[year\])\s*(.*?)\.?\s*(?:All rights reserved|<br|$)/i);
+    if (m && m[1]) names.push(m[1].trim());
+  });
+  const unique = names.filter((n, i) => n.length > 1 && names.indexOf(n) === i);
+  if (!unique.length) return;
+  (function walk(target) {
+    if (!target || typeof target !== 'object') return;
+    for (const key of Object.keys(target)) {
+      if (typeof target[key] === 'string') {
+        unique.forEach(name => { target[key] = target[key].split(name).join(userName); });
+      } else walk(target[key]);
+    }
+  })(node);
+}
+
+document.getElementById('downloadJsonBtn').addEventListener('click', () => {
+  if (!lastResult) return;
+  requireLicense(() => {
+    const blob = new Blob([JSON.stringify(lastResult, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'data.json';
+    a.click();
+    URL.revokeObjectURL(url);
+  });
+});
+
+function openEditView() {
+  if (typeof window.closePreviewModal === 'function') window.closePreviewModal();
+  const rail = document.getElementById('editorStructure');
+  if (rail && window.ProfileEditor && window.ProfileEditor.isActive()) {
+    rail.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    return;
+  }
+  document.getElementById('resumeForm').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+document.getElementById('editInfoBtn').addEventListener('click', openEditView);
+window.rpEditDetails = openEditView;
+</script>
+<script src="../header.js"></script>
+<script src="user-colors.js"></script>
+<script src="preview-and-download.js"></script>
+<script>
+  // The editor script may still be downloading when the schema fetches
+  // resolve. Wait for it explicitly so the editor is never silently
+  // skipped in favour of the flat form.
+  if (!window.__rpEditorReady) {
+    window.__rpEditorReady = new Promise(function (resolve) {
+      window.__rpEditorResolve = resolve;
+      setTimeout(function () { resolve(!!window.ProfileEditor); }, 4000);
+    });
+  }
+</script>
+<script>
+  // The preview always renders at a desktop design width and is scaled down to
+  // fit the canvas. Without this the iframe takes the narrow column width and
+  // every template drops into its mobile layout.
+  (function () {
+    var DESIGN_WIDTH = 1120;
+    function fitEditorPreview() {
+      var body = document.querySelector('.editor-canvas-body');
+      var frame = document.getElementById('editorPreview');
+      if (!body || !frame) return;
+      var available = body.clientWidth;
+      var visible = body.clientHeight;
+      if (available < 200 || visible < 100) return;
+      var scale = Math.min(1, available / DESIGN_WIDTH);
+      frame.style.width = DESIGN_WIDTH + 'px';
+      frame.style.height = Math.round(visible / scale) + 'px';
+      frame.style.transformOrigin = 'top left';
+      frame.style.transform = 'scale(' + scale + ')';
+      var spare = available - DESIGN_WIDTH * scale;
+      frame.style.marginLeft = spare > 0 ? Math.round(spare / 2) + 'px' : '0px';
+    }
+    window.__rpFitEditorPreview = fitEditorPreview;
+    window.addEventListener('resize', fitEditorPreview);
+    var body = document.querySelector('.editor-canvas-body');
+    if (body && typeof ResizeObserver === 'function') {
+      new ResizeObserver(fitEditorPreview).observe(body);
+    }
+    fitEditorPreview();
+  })();
+</script>
+<script src="profile-editor.js"></script>
+</body>
+</html>

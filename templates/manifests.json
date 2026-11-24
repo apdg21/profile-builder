@@ -1,0 +1,53 @@
+{
+  "profile/style1": [
+    "assets/profile.jpg",
+    "assets/instrument-serif-400.woff2",
+    "assets/instrument-serif-400-ext.woff2",
+    "assets/instrument-serif-400-italic.woff2",
+    "assets/OFL-instrument-serif.txt",
+    "data.json",
+    "index.html",
+    "main.js",
+    "style.css",
+    "assets/rp-profile.js",
+    "assets/rp-site-link.js"
+  ],
+  "profile/style2": [
+    "assets/profile.jpg",
+    "assets/instrument-serif-400.woff2",
+    "assets/instrument-serif-400-ext.woff2",
+    "assets/instrument-serif-400-italic.woff2",
+    "assets/OFL-instrument-serif.txt",
+    "data.json",
+    "index.html",
+    "main.js",
+    "style.css",
+    "assets/rp-profile.js",
+    "assets/rp-site-link.js"
+  ],
+  "profile/style3": [
+    "assets/profile.jpg",
+    "assets/space-grotesk-var.woff2",
+    "assets/space-grotesk-var-ext.woff2",
+    "assets/OFL-space-grotesk.txt",
+    "data.json",
+    "index.html",
+    "main.js",
+    "style.css",
+    "assets/rp-profile.js",
+    "assets/rp-site-link.js"
+  ],
+  "profile/style4": [
+    "assets/profile.jpg",
+    "assets/instrument-serif-400.woff2",
+    "assets/instrument-serif-400-ext.woff2",
+    "assets/instrument-serif-400-italic.woff2",
+    "assets/OFL-instrument-serif.txt",
+    "data.json",
+    "index.html",
+    "main.js",
+    "style.css",
+    "assets/rp-profile.js",
+    "assets/rp-site-link.js"
+  ]
+}

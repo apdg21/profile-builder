@@ -1,0 +1,140 @@
+{
+  "fullName": "Maya Reyes",
+  "headline": "Brand & web designer",
+  "tagline": "I help small businesses look as good online as they do in person.",
+  "profileImage": "assets/profile.jpg",
+  "coverImage": "",
+  "location": "Cebu City, Philippines",
+  "availability": "Open for projects this January",
+  "businessName": "Maya Reyes Studio",
+  "businessUrl": "",
+  "ctaText": "Message me on Messenger",
+  "ctaUrl": "",
+  "aboutTitle": "About",
+  "aboutText": "I'm Maya, a brand and web designer based in Cebu.\n\nFor the last eight years I've helped cafés, clinics, and family businesses look like the version of themselves they want customers to meet — clear logos, warm websites, and print that feels considered.\n\nMost of my work is one-on-one with the owner. No handoff to a stranger halfway through.",
+  "servicesTitle": "What I do",
+  "servicesIntro": "Fixed-scope projects, quoted before we start.",
+  "services": [
+    {
+      "title": "Brand identity",
+      "description": "Logo, colours, type, and a one-page guide you can hand to any printer.",
+      "price": "from ₱18,000",
+      "link": ""
+    },
+    {
+      "title": "One-page website",
+      "description": "A fast, mobile-first site with your story, services, and a way to message you.",
+      "price": "from ₱12,000",
+      "link": ""
+    },
+    {
+      "title": "Menu & print",
+      "description": "Menus, packaging, and storefront signage that match your brand.",
+      "price": "from ₱6,000",
+      "link": ""
+    }
+  ],
+  "workTitle": "Recent work",
+  "work": [
+    {
+      "role": "Brand identity",
+      "company": "Harbor Coffee",
+      "period": "2025",
+      "description": "A full rebrand for a three-branch coffee shop, from packaging to signage."
+    },
+    {
+      "role": "Website design",
+      "company": "Isla Dental",
+      "period": "2024",
+      "description": "A calm, appointment-first site for a family dental clinic."
+    },
+    {
+      "role": "Packaging",
+      "company": "Lola's Chips",
+      "period": "2024",
+      "description": "Shelf-ready packaging for a homegrown snack brand."
+    }
+  ],
+  "skillsTitle": "Tools & skills",
+  "skills": [
+    {
+      "name": "Brand strategy"
+    },
+    {
+      "name": "Logo design"
+    },
+    {
+      "name": "Figma"
+    },
+    {
+      "name": "Webflow"
+    },
+    {
+      "name": "Typography"
+    },
+    {
+      "name": "Print production"
+    }
+  ],
+  "credentialsTitle": "Background",
+  "credentials": [
+    {
+      "title": "BA Communication Arts",
+      "issuer": "University of San Carlos",
+      "year": "2014"
+    },
+    {
+      "title": "Certified Webflow Partner",
+      "issuer": "Webflow",
+      "year": "2022"
+    }
+  ],
+  "testimonialsTitle": "Kind words",
+  "testimonials": [
+    {
+      "text": "Maya took a messy idea and gave us a brand we're proud to put on the door.",
+      "author": "Ana Lim",
+      "role": "Owner, Harbor Coffee"
+    },
+    {
+      "text": "She asked better questions than any agency we talked to — and delivered early.",
+      "author": "Dr. Rey Tan",
+      "role": "Isla Dental"
+    }
+  ],
+  "faqTitle": "Common questions",
+  "faq": [
+    {
+      "question": "How long does a project take?",
+      "answer": "A one-page site is usually two to three weeks. Full branding runs four to six."
+    },
+    {
+      "question": "Do you work with clients outside Cebu?",
+      "answer": "Yes — most of my work is remote, with calls scheduled in your time zone."
+    }
+  ],
+  "contactTitle": "Get in touch",
+  "contactIntro": "Tell me what you're building. I reply within one working day.",
+  "email": "hello@mayareyes.studio",
+  "phone": "+63 917 555 0123",
+  "messengerUsername": "mayareyes.studio",
+  "messengerNote": "Opens Messenger with your message ready to send.",
+  "bookingUrl": "https://cal.com/mayareyes/15min",
+  "bookingLabel": "Book a 15-minute call",
+  "socialLinks": [
+    {
+      "platform": "Facebook",
+      "url": "https://facebook.com/mayareyes.studio"
+    },
+    {
+      "platform": "Instagram",
+      "url": "https://instagram.com/mayareyes.studio"
+    },
+    {
+      "platform": "LinkedIn",
+      "url": "https://linkedin.com/in/mayareyes"
+    }
+  ],
+  "copyright": "© 2026 Maya Reyes Studio",
+  "rpTemplate": "style1"
+}

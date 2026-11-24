@@ -1,0 +1,133 @@
+{
+  "fullName": "Daniel Cruz",
+  "headline": "Operations & growth consultant",
+  "tagline": "I help founder-led companies build the operating rhythm that lets them grow without the chaos.",
+  "profileImage": "assets/profile.jpg",
+  "coverImage": "",
+  "location": "Makati City, Philippines",
+  "availability": "Taking two clients for Q1",
+  "businessName": "Cruz Advisory",
+  "businessUrl": "https://cruzadvisory.ph",
+  "ctaText": "Book an intro call",
+  "ctaUrl": "",
+  "aboutTitle": "About",
+  "aboutText": "I spent eleven years running operations inside growing Philippine companies before starting Cruz Advisory in 2021.\n\nI work with founders who have product-market fit but are drowning in process debt — the kind that shows up as missed deadlines, key-person risk, and a team that can't tell you what 'done' means.\n\nMy work is hands-on. We diagnose together, fix the two or three things that actually move the business, then hand your team a system they can run without me.",
+  "servicesTitle": "How I work",
+  "servicesIntro": "Three ways to engage, depending on what stage you are in.",
+  "services": [
+    {
+      "title": "Operations diagnostic",
+      "description": "A two-week review of your team, tools, and delivery cycle, ending with a prioritised action plan.",
+      "price": "",
+      "link": ""
+    },
+    {
+      "title": "Fractional COO",
+      "description": "Two days a week inside your leadership team, owning delivery and hiring until you are ready to hire your own.",
+      "price": "",
+      "link": ""
+    },
+    {
+      "title": "Founder advisory",
+      "description": "A standing monthly session for founders who need a thinking partner, not a consultant deck.",
+      "price": "",
+      "link": ""
+    }
+  ],
+  "workTitle": "Experience",
+  "work": [
+    {
+      "role": "Founder & Principal",
+      "company": "Cruz Advisory",
+      "period": "2021 — present",
+      "description": "Advised 30+ founder-led companies on operations, hiring, and delivery."
+    },
+    {
+      "role": "Head of Operations",
+      "company": "Pamilya Logistics",
+      "period": "2016 — 2021",
+      "description": "Built the operating model that took the company from 40 to 400 employees."
+    },
+    {
+      "role": "Operations Manager",
+      "company": "Metro Retail Group",
+      "period": "2010 — 2016",
+      "description": "Ran store operations for a 60-branch retail network."
+    }
+  ],
+  "skillsTitle": "Areas of focus",
+  "skills": [
+    {
+      "name": "Operating models"
+    },
+    {
+      "name": "Hiring & org design"
+    },
+    {
+      "name": "Process improvement"
+    },
+    {
+      "name": "Unit economics"
+    },
+    {
+      "name": "Founder coaching"
+    }
+  ],
+  "credentialsTitle": "Credentials",
+  "credentials": [
+    {
+      "title": "MBA, Strategy",
+      "issuer": "Asian Institute of Management",
+      "year": "2015"
+    },
+    {
+      "title": "Lean Six Sigma Black Belt",
+      "issuer": "ASQ",
+      "year": "2018"
+    }
+  ],
+  "testimonialsTitle": "Client feedback",
+  "testimonials": [
+    {
+      "text": "Daniel rebuilt our delivery process in six weeks. The same team now ships twice as much without working later.",
+      "author": "Patricia Go",
+      "role": "CEO, Pamilya Logistics"
+    },
+    {
+      "text": "He tells you what he actually thinks, which is rarer and more useful than it sounds.",
+      "author": "Miguel Tan",
+      "role": "Founder, Seedling PH"
+    }
+  ],
+  "faqTitle": "Working together",
+  "faq": [
+    {
+      "question": "Do you take equity?",
+      "answer": "No. I charge a flat monthly fee so my advice stays independent."
+    },
+    {
+      "question": "What size company do you work with?",
+      "answer": "Usually 15 to 250 people, founder-led, past product-market fit."
+    }
+  ],
+  "contactTitle": "Start a conversation",
+  "contactIntro": "Send a short note about your company and what is not working. If I can help, we will book a call.",
+  "email": "daniel@cruzadvisory.ph",
+  "phone": "+63 917 555 0198",
+  "messengerUsername": "",
+  "messengerNote": "",
+  "bookingUrl": "https://cal.com/danielcruz/intro",
+  "bookingLabel": "Book a 30-minute intro call",
+  "socialLinks": [
+    {
+      "platform": "LinkedIn",
+      "url": "https://linkedin.com/in/danielcruzph"
+    },
+    {
+      "platform": "Website",
+      "url": "https://cruzadvisory.ph"
+    }
+  ],
+  "copyright": "© 2026 Cruz Advisory",
+  "rpTemplate": "style2"
+}
