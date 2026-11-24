@@ -2083,6 +2083,13 @@ function escHtml(value) {
     .replace(/"/g, '&quot;');
 }
 
+// A JSON <script> element ends at the first literal "</script>", so a bio or
+// title containing one would close the tag early. Escaping "<" and ">" as
+// \u003c / \u003e keeps the JSON valid and renders identically.
+function safeJsonLd(value) {
+  return JSON.stringify(value, null, 2).replace(/</g, '\\u003c').replace(/>/g, '\\u003e');
+}
+
 /*
  * Profile pages get a ProfilePage/Person graph built by the shared renderer,
  * so the structured data is identical to what the published site carries.
@@ -2119,7 +2126,7 @@ function injectProfileSeoHeadTags(html, data, opts) {
     tags.push(`<meta property="og:url" content="${escHtml(url)}" />`);
   }
   if (jsonLd) {
-    tags.push(`<script type="application/ld+json" id="rp-google-schema">\n${JSON.stringify(jsonLd, null, 2)}\n</script>`);
+    tags.push(`<script type="application/ld+json" id="rp-google-schema">\n${safeJsonLd(jsonLd)}\n</script>`);
   }
 
   let out = html;
@@ -2192,7 +2199,7 @@ function injectSeoHeadTags(html, data, opts) {
   <meta property="og:description" content="${safeBio}" />
   <meta property="og:type" content="profile" />
   <script type="application/ld+json" id="rp-google-schema">
-${JSON.stringify(schemaObj, null, 2)}
+${safeJsonLd(schemaObj)}
   </script>`;
 
     if (!html.includes('id="rp-google-schema"') && html.includes('</head>')) {
