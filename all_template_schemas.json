@@ -508,6 +508,289 @@
       ],
       "copyright": "© 2026 Ana Villanueva",
       "rpTemplate": "style4"
+    },
+    "style5": {
+      "fullName": "Paolo Mendoza",
+      "headline": "Web developer & automation consultant",
+      "tagline": "I build fast websites and wire up the boring parts of your business so they run themselves.",
+      "profileImage": "assets/profile.jpg",
+      "coverImage": "",
+      "location": "Makati City, Philippines",
+      "availability": "Two project slots open this quarter",
+      "businessName": "Mendoza Digital",
+      "businessUrl": "",
+      "ctaText": "Start a project",
+      "ctaUrl": "",
+      "aboutTitle": "About",
+      "aboutText": "I'm Paolo, a developer based in Makati.\n\nFor six years I've helped agencies, online sellers, and professional practices ship websites that load fast and don't need a babysitter — then connected the back office: invoicing, inventory, leads, and reports, all flowing without copy-paste.\n\nI work in sprints with fixed quotes. You always know what ships this week and what it costs.",
+      "servicesTitle": "What I do",
+      "servicesIntro": "Fixed-scope builds, quoted before we start.",
+      "services": [
+        {
+          "title": "Websites & landing pages",
+          "description": "Fast, mobile-first sites with your story, services, and a way to message you — measured against real speed scores.",
+          "price": "from ₱35,000",
+          "link": ""
+        },
+        {
+          "title": "Business automations",
+          "description": "Forms to sheets to invoices. I connect the tools you already use so data enters once and goes everywhere.",
+          "price": "from ₱15,000",
+          "link": ""
+        },
+        {
+          "title": "Care & maintenance plans",
+          "description": "Updates, backups, small changes, and a monthly report — so your site never quietly breaks.",
+          "price": "₱2,500/mo",
+          "link": ""
+        }
+      ],
+      "workTitle": "Recent projects",
+      "work": [
+        {
+          "role": "Booking site + CRM automation",
+          "company": "Cebu Physical Therapy Clinic",
+          "period": "2025",
+          "description": "Patients book online, records land in Airtable, reminders send themselves. Front-desk time on scheduling dropped by half."
+        },
+        {
+          "role": "E-commerce rebuild",
+          "company": "Sikat Home Goods",
+          "period": "2025",
+          "description": "Migrated a slow 4-second store to a static-first build that loads under a second on mobile data."
+        },
+        {
+          "role": "Invoicing pipeline",
+          "company": "Laguna Events Co.",
+          "period": "2024",
+          "description": "Quotations, contracts, and invoices generated from one form — no more weekend spreadsheet marathons."
+        }
+      ],
+      "skillsTitle": "Tools & skills",
+      "skills": [
+        {
+          "name": "JavaScript"
+        },
+        {
+          "name": "React"
+        },
+        {
+          "name": "Next.js"
+        },
+        {
+          "name": "Make.com"
+        },
+        {
+          "name": "Airtable"
+        },
+        {
+          "name": "Google Workspace automation"
+        },
+        {
+          "name": "Performance audits"
+        }
+      ],
+      "credentialsTitle": "Background",
+      "credentials": [
+        {
+          "title": "BS Computer Science",
+          "issuer": "De La Salle University",
+          "year": "2018"
+        },
+        {
+          "title": "Make.com Certified Partner",
+          "issuer": "Make",
+          "year": "2023"
+        }
+      ],
+      "testimonialsTitle": "Kind words",
+      "testimonials": [
+        {
+          "text": "Paolo automated our booking mess in three weeks. Our front desk finally breathes.",
+          "author": "Dr. Kai Alvarez",
+          "role": "Cebu Physical Therapy Clinic"
+        },
+        {
+          "text": "Fixed quote, weekly demos, no surprises. The site is twice as fast as the old one.",
+          "author": "Mika Santos",
+          "role": "Sikat Home Goods"
+        }
+      ],
+      "faqTitle": "Common questions",
+      "faq": [
+        {
+          "question": "How do you price projects?",
+          "answer": "Fixed quotes per sprint after one scoping call — you approve the number before any work starts."
+        },
+        {
+          "question": "Do you support clients outside Metro Manila?",
+          "answer": "Yes — most of my work is remote, with calls scheduled in your time zone."
+        }
+      ],
+      "contactTitle": "Get in touch",
+      "contactIntro": "Tell me what's slowing you down. I reply within one working day.",
+      "email": "hello@mendozadigital.ph",
+      "phone": "+63 917 555 0148",
+      "messengerUsername": "mendozadigital",
+      "messengerNote": "Opens Messenger with your message ready to send.",
+      "bookingUrl": "https://cal.com/paolomendoza/30min",
+      "bookingLabel": "Book a 30-minute scoping call",
+      "socialLinks": [
+        {
+          "platform": "LinkedIn",
+          "url": "https://linkedin.com/in/paolomendoza"
+        },
+        {
+          "platform": "GitHub",
+          "url": "https://github.com/paolomendoza"
+        },
+        {
+          "platform": "Facebook",
+          "url": "https://facebook.com/mendozadigital"
+        }
+      ],
+      "copyright": "© 2026 Paolo Mendoza",
+      "rpTemplate": "style5"
+    },
+    "style6": {
+      "fullName": "Elena Navarro",
+      "headline": "Wedding & editorial photographer",
+      "tagline": "Honest photographs for people who'd rather feel a moment than pose for it.",
+      "profileImage": "assets/profile.jpg",
+      "coverImage": "assets/cover.jpg",
+      "location": "Siargao Island, Philippines · available nationwide",
+      "availability": "Booking 2026–2027 weddings",
+      "businessName": "Navarro Foto",
+      "businessUrl": "",
+      "ctaText": "Check my dates",
+      "ctaUrl": "",
+      "aboutTitle": "About",
+      "aboutText": "I'm Elena, a photographer based on Siargao island.\n\nNine years ago I traded a desk in Manila for a boat schedule and a camera bag. Since then I've shot over a hundred weddings, three resort rebrands, and a growing shelf of magazine work — always chasing the same thing: pictures that look like the day actually felt.\n\nI shoot quietly, direct gently, and deliver fast.",
+      "servicesTitle": "Ways to work together",
+      "servicesIntro": "Collections are fixed and travel-ready — no surprise fees.",
+      "services": [
+        {
+          "title": "Weddings & engagements",
+          "description": "Full-day coverage, two photographers, sneak peeks in 48 hours, and a hand-edited gallery.",
+          "price": "from ₱48,000",
+          "link": ""
+        },
+        {
+          "title": "Editorial & brand shoots",
+          "description": "Resorts, restaurants, and makers — imagery built for menus, websites, and press kits.",
+          "price": "from ₱18,000",
+          "link": ""
+        },
+        {
+          "title": "Prints & albums",
+          "description": "Layflat albums and fine-art prints, color-graded to match the gallery you fell in love with.",
+          "price": "from ₱9,500",
+          "link": ""
+        }
+      ],
+      "workTitle": "Selected work",
+      "work": [
+        {
+          "role": "Cloud 9, sunrise ceremony",
+          "company": "Andrea & Josh",
+          "period": "2025",
+          "description": "A barefoot wedding on the boardwalk — twelve guests, one perfect swell, zero umbrellas."
+        },
+        {
+          "role": "Resort relaunch campaign",
+          "company": "Hayahay Villas",
+          "period": "2025",
+          "description": "Three days of shooting across villas, kitchen, and lagoon for the reopening website and print collateral."
+        },
+        {
+          "role": "Island food story",
+          "company": "Tahanan Table magazine",
+          "period": "2024",
+          "description": "A ten-page feature on Surigao home kitchens, shot entirely on 35mm film."
+        }
+      ],
+      "skillsTitle": "How I shoot",
+      "skills": [
+        {
+          "name": "Natural light"
+        },
+        {
+          "name": "35mm & 120 film"
+        },
+        {
+          "name": "Documentary direction"
+        },
+        {
+          "name": "Color grading"
+        },
+        {
+          "name": "Album design"
+        },
+        {
+          "name": "Drone coverage"
+        }
+      ],
+      "credentialsTitle": "Credentials",
+      "credentials": [
+        {
+          "title": "Featured island weddings portfolio",
+          "issuer": "Bride & Harbor Magazine",
+          "year": "2025"
+        },
+        {
+          "title": "Best in Show, Philippine Photo Awards",
+          "issuer": "FPPF",
+          "year": "2023"
+        }
+      ],
+      "testimonialsTitle": "Kind words",
+      "testimonials": [
+        {
+          "text": "We forgot she was there — then cried at the gallery. Every picture felt like the day itself.",
+          "author": "Andrea & Josh",
+          "role": "Cloud 9, Siargao"
+        },
+        {
+          "text": "The resort has never looked this honest. Bookings went up the month the new photos went live.",
+          "author": "Menchie dela Cruz",
+          "role": "Owner, Hayahay Villas"
+        }
+      ],
+      "faqTitle": "Common questions",
+      "faq": [
+        {
+          "question": "Do you travel for weddings?",
+          "answer": "Happily. Boat and fare are quoted upfront; anywhere in the Philippines, and passports for the right story."
+        },
+        {
+          "question": "How fast is delivery?",
+          "answer": "48-hour sneak peeks, full gallery in four weeks, albums eight weeks after design approval."
+        }
+      ],
+      "contactTitle": "Check your date",
+      "contactIntro": "Tell me your date and place — I'll answer with availability and two sample galleries within a day.",
+      "email": "hello@navarrofoto.ph",
+      "phone": "+63 917 555 0182",
+      "messengerUsername": "navarrofoto",
+      "messengerNote": "Opens Messenger with your message ready to send.",
+      "bookingUrl": "https://cal.com/elenanavarro/20min",
+      "bookingLabel": "Book a 20-minute date check",
+      "socialLinks": [
+        {
+          "platform": "Instagram",
+          "url": "https://instagram.com/navarrofoto"
+        },
+        {
+          "platform": "Facebook",
+          "url": "https://facebook.com/navarrofoto"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://youtube.com/@navarrofoto"
+        }
+      ],
+      "copyright": "© 2026 Navarro Foto",
+      "rpTemplate": "style6"
     }
   }
 }

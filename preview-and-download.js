@@ -63,7 +63,7 @@ function mergeProfilePhoto(generatedData, originalTemplateSchema, photoDataUri) 
   return generatedData;
 }
 
-// Profile template folders are named style1..style4 on disk and in the
+// Profile template folders are named style1..style6 on disk and in the
 // dropdown, so no display-name normalisation is needed (kept as an empty map
 // so the builder pages still agree on the shape of a template key).
 const NAME_TO_STYLE_KEY = {};
@@ -83,6 +83,8 @@ const CHECKOUT_URL_BY_TEMPLATE = {
   "profile/style2": "https://resumeprotemplate.gumroad.com/l/generated-profile-editorial",
   "profile/style3": "https://resumeprotemplate.gumroad.com/l/generated-profile-spotlight",
   "profile/style4": "https://resumeprotemplate.gumroad.com/l/generated-profile-quiet",
+  "profile/style5": "https://resumeprotemplate.gumroad.com/l/generated-profile-halo",
+  "profile/style6": "https://resumeprotemplate.gumroad.com/l/generated-profile-vista",
 };
 const DEFAULT_CHECKOUT_URL = "https://resumeprotemplate.gumroad.com/profile-collection";
 
@@ -2885,7 +2887,9 @@ const ALL_TEMPLATE_METADATA = {
   style1: { name: 'Identity', desc: 'Warm and centred. A portrait-led intro, your story, services or skills, and a contact block that covers email, Messenger and booking.' },
   style2: { name: 'Editorial', desc: 'A magazine-style layout with strong typography and a sidebar of quick facts. Suits consultants, writers and anyone whose work deserves a read.' },
   style3: { name: 'Spotlight', desc: 'Dark, bold and high-contrast. Makes a portfolio, services and social links feel like a launch page.' },
-  style4: { name: 'Quiet', desc: 'Minimal and typographic. Lets the name and the writing carry the page with almost no decoration.' }
+  style4: { name: 'Quiet', desc: 'Minimal and typographic. Lets the name and the writing carry the page with almost no decoration.' },
+  style5: { name: 'Halo', desc: 'Light glass panels on a soft gradient. Reads as a modern personal brand page with one geometric voice from nav to footer.' },
+  style6: { name: 'Vista', desc: 'A cinematic full-bleed cover hero over warm paper sections. Editorial serif headlines for people whose work is visual.' }
 };
 
 function getActiveStyleKey() {

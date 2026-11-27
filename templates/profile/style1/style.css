@@ -423,9 +423,18 @@ a { color: inherit; }
 }
 
 @media (max-width: 760px) {
-  .pf-nav { padding: 14px 20px; gap: 12px; }
+  /* Two rows on phones: brand + CTA on top, section links on a scrollable row
+     below, so the nav stays usable instead of disappearing. */
+  .pf-nav { flex-wrap: wrap; padding: 12px 20px 0; gap: 10px; row-gap: 0; }
   .pf-nav__brand { font-size: 1.2rem; }
-  .pf-nav__links { display: none; }
+  .pf-nav__links {
+    order: 3; flex: 1 0 100%;
+    display: flex; gap: 16px; padding: 10px 0 12px;
+    overflow-x: auto; -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; white-space: nowrap;
+    font-size: .64rem; letter-spacing: .12em;
+  }
+  .pf-nav__links::-webkit-scrollbar { display: none; }
   .pf-hero { padding: 68px 22px 64px; }
   .pf-hero__inner { max-width: 100%; }
   .pf-hero__media { margin-bottom: 26px; }

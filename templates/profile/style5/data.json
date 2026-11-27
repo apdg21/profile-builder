@@ -1,0 +1,143 @@
+{
+  "fullName": "Paolo Mendoza",
+  "headline": "Web developer & automation consultant",
+  "tagline": "I build fast websites and wire up the boring parts of your business so they run themselves.",
+  "profileImage": "assets/profile.jpg",
+  "coverImage": "",
+  "location": "Makati City, Philippines",
+  "availability": "Two project slots open this quarter",
+  "businessName": "Mendoza Digital",
+  "businessUrl": "",
+  "ctaText": "Start a project",
+  "ctaUrl": "",
+  "aboutTitle": "About",
+  "aboutText": "I'm Paolo, a developer based in Makati.\n\nFor six years I've helped agencies, online sellers, and professional practices ship websites that load fast and don't need a babysitter — then connected the back office: invoicing, inventory, leads, and reports, all flowing without copy-paste.\n\nI work in sprints with fixed quotes. You always know what ships this week and what it costs.",
+  "servicesTitle": "What I do",
+  "servicesIntro": "Fixed-scope builds, quoted before we start.",
+  "services": [
+    {
+      "title": "Websites & landing pages",
+      "description": "Fast, mobile-first sites with your story, services, and a way to message you — measured against real speed scores.",
+      "price": "from ₱35,000",
+      "link": ""
+    },
+    {
+      "title": "Business automations",
+      "description": "Forms to sheets to invoices. I connect the tools you already use so data enters once and goes everywhere.",
+      "price": "from ₱15,000",
+      "link": ""
+    },
+    {
+      "title": "Care & maintenance plans",
+      "description": "Updates, backups, small changes, and a monthly report — so your site never quietly breaks.",
+      "price": "₱2,500/mo",
+      "link": ""
+    }
+  ],
+  "workTitle": "Recent projects",
+  "work": [
+    {
+      "role": "Booking site + CRM automation",
+      "company": "Cebu Physical Therapy Clinic",
+      "period": "2025",
+      "description": "Patients book online, records land in Airtable, reminders send themselves. Front-desk time on scheduling dropped by half."
+    },
+    {
+      "role": "E-commerce rebuild",
+      "company": "Sikat Home Goods",
+      "period": "2025",
+      "description": "Migrated a slow 4-second store to a static-first build that loads under a second on mobile data."
+    },
+    {
+      "role": "Invoicing pipeline",
+      "company": "Laguna Events Co.",
+      "period": "2024",
+      "description": "Quotations, contracts, and invoices generated from one form — no more weekend spreadsheet marathons."
+    }
+  ],
+  "skillsTitle": "Tools & skills",
+  "skills": [
+    {
+      "name": "JavaScript"
+    },
+    {
+      "name": "React"
+    },
+    {
+      "name": "Next.js"
+    },
+    {
+      "name": "Make.com"
+    },
+    {
+      "name": "Airtable"
+    },
+    {
+      "name": "Google Workspace automation"
+    },
+    {
+      "name": "Performance audits"
+    }
+  ],
+  "credentialsTitle": "Background",
+  "credentials": [
+    {
+      "title": "BS Computer Science",
+      "issuer": "De La Salle University",
+      "year": "2018"
+    },
+    {
+      "title": "Make.com Certified Partner",
+      "issuer": "Make",
+      "year": "2023"
+    }
+  ],
+  "testimonialsTitle": "Kind words",
+  "testimonials": [
+    {
+      "text": "Paolo automated our booking mess in three weeks. Our front desk finally breathes.",
+      "author": "Dr. Kai Alvarez",
+      "role": "Cebu Physical Therapy Clinic"
+    },
+    {
+      "text": "Fixed quote, weekly demos, no surprises. The site is twice as fast as the old one.",
+      "author": "Mika Santos",
+      "role": "Sikat Home Goods"
+    }
+  ],
+  "faqTitle": "Common questions",
+  "faq": [
+    {
+      "question": "How do you price projects?",
+      "answer": "Fixed quotes per sprint after one scoping call — you approve the number before any work starts."
+    },
+    {
+      "question": "Do you support clients outside Metro Manila?",
+      "answer": "Yes — most of my work is remote, with calls scheduled in your time zone."
+    }
+  ],
+  "contactTitle": "Get in touch",
+  "contactIntro": "Tell me what's slowing you down. I reply within one working day.",
+  "email": "hello@mendozadigital.ph",
+  "phone": "+63 917 555 0148",
+  "messengerUsername": "mendozadigital",
+  "messengerNote": "Opens Messenger with your message ready to send.",
+  "bookingUrl": "https://cal.com/paolomendoza/30min",
+  "bookingLabel": "Book a 30-minute scoping call",
+  "socialLinks": [
+    {
+      "platform": "LinkedIn",
+      "url": "https://linkedin.com/in/paolomendoza"
+    },
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/paolomendoza"
+    },
+    {
+      "platform": "Facebook",
+      "url": "https://facebook.com/mendozadigital"
+    }
+  ],
+  "copyright": "© 2026 Paolo Mendoza",
+  "rpTemplate": "style5"
+}

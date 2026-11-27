@@ -323,9 +323,18 @@ a { color: inherit; }
   .pf-section { grid-template-columns: 150px minmax(0, 1fr); column-gap: 32px; }
 }
 @media (max-width: 680px) {
-  .pf-nav { padding: 15px 20px; gap: 12px; }
+  /* Two rows on phones: brand + CTA on top, section links on a scrollable row
+     below, so the nav stays usable instead of disappearing. */
+  .pf-nav { flex-wrap: wrap; padding: 12px 20px 0; gap: 10px; row-gap: 0; }
   .pf-nav__brand { font-size: 1.3rem; }
-  .pf-nav__links { display: none; }
+  .pf-nav__links {
+    order: 3; flex: 1 0 100%;
+    display: flex; gap: 16px; padding: 10px 0 12px;
+    overflow-x: auto; -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; white-space: nowrap;
+    font-size: .64rem; letter-spacing: .12em;
+  }
+  .pf-nav__links::-webkit-scrollbar { display: none; }
   .pf-hero { padding: 52px 20px 48px; }
   .pf-hero__inner { grid-template-columns: 1fr; gap: 34px; }
   .pf-hero__media { max-width: 250px; }

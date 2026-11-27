@@ -145,8 +145,28 @@
     document.body.appendChild(wrap);
   }
 
+  function hidePill() {
+    var wrap = document.querySelector('.rp-site-link-pill');
+    if (wrap && wrap.parentNode) wrap.parentNode.removeChild(wrap);
+  }
+
+  // Most templates hide their in-page nav on narrow screens (a hamburger menu
+  // replaces it), which also hides the item inserted above. Whenever none of
+  // the links we inserted is actually rendered, use the floating pill so they
+  // stay reachable. Re-checked on resize and after the template rebuilds.
+  function syncLinks() {
+    var nodes = document.querySelectorAll('[' + MARK + ']');
+    for (var i = 0; i < nodes.length; i++) {
+      if (nodes[i].getClientRects().length) { hidePill(); return; }
+    }
+    showPill();
+  }
+
+  var resizeTimer = null;
+
   function start() {
-    var placed = insertIntoNavs();
+    insertIntoNavs();
+    syncLinks();
     // Many templates build their nav from data.json after load, and some
     // rebuild it later, so keep re-adding the link whenever the DOM changes.
     var pending = false;
@@ -155,12 +175,20 @@
       pending = true;
       setTimeout(function () {
         pending = false;
-        if (insertIntoNavs()) placed = true;
+        insertIntoNavs();
+        syncLinks();
       }, 50);
     }).observe(document.body, { childList: true, subtree: true });
+    // Let the template settle its own layout, then check what is on screen.
     setTimeout(function () {
-      if (!placed && !insertIntoNavs()) showPill();
+      insertIntoNavs();
+      syncLinks();
     }, 3000);
+    window.addEventListener('resize', function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(syncLinks, 150);
+    });
+    window.addEventListener('orientationchange', syncLinks);
   }
 
   // Branch sites live at "/", but a profile's public URL is /p/<slug> with no

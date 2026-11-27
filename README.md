@@ -4,7 +4,7 @@ A standalone "identity page" product: professional details, services, skills,
 social links, a Messenger contact form and a booking link on one page that
 search engines can index. It shares the plumbing of the other builders
 (publishing, licensing, drafts, theme/colour injection) but has its own
-schema, mappings, renderer and four designs under `templates/profile/`. No AI
+schema, mappings, renderer and six designs under `templates/profile/`. No AI
 and no JSON upload — the customer fills the section editor and gets exactly
 that content.
 
@@ -28,7 +28,7 @@ indexed.
 | `preview-and-download.js` | Preview modal, theme + user-colour injection, hidden sections, ZIP download, license gate, publish flow, SEO head helpers. |
 | `user-colors.js` | Per-section text/background colour CSS, scoped with `[data-rp-section="…"]`. |
 | `draft-store.js` | Auto-saved drafts in IndexedDB (kind `profile`). |
-| `templates/profile/style1…style4/` | The four designs. |
+| `templates/profile/style1…style6/` | The six designs (Identity, Editorial, Spotlight, Quiet, Halo, Vista). |
 
 ## Data flow
 
@@ -46,7 +46,7 @@ indexed.
    (`data-rp-prerendered="1"`), so crawlers see real content without running
    JavaScript. `main.js` skips rendering when that marker is present.
 
-All four designs share one markup contract, which is why one renderer serves
+All six designs share one markup contract, which is why one renderer serves
 them: `<div class="pf">` → `<header class="pf-nav">` →
 `<main class="pf-main">` with `<section data-rp-section="About|Services|…">` →
 `<footer class="pf-footer">`. Colour theming rides on `--pf-*` custom
@@ -107,14 +107,14 @@ license key again.
 
 ## Gumroad
 
-Each of the 4 designs is its own Gumroad product, so a key unlocks only the
+Each of the 6 designs is its own Gumroad product, so a key unlocks only the
 design it was bought for:
 
 - Checkout URLs: one per design in `CHECKOUT_URL_BY_TEMPLATE`
   (`preview-and-download.js`); unknown styles fall back to
   `https://resumeprotemplate.gumroad.com/profile-collection`.
 - Frontend license storage key: `rpProfileLicense`.
-- Server product mapping: each `profile/style1…style4` key in
+- Server product mapping: each `profile/style1…style6` key in
   `functions/api/_license.js` has its own `GUMROAD_PRODUCT_ID_*` secret.
 
 ## Server secrets (Cloudflare Pages)
@@ -125,6 +125,8 @@ design it was bought for:
 | `GUMROAD_PRODUCT_ID_PROFILE_EDITORIAL` | same | |
 | `GUMROAD_PRODUCT_ID_PROFILE_SPOTLIGHT` | same | |
 | `GUMROAD_PRODUCT_ID_PROFILE_QUIET` | same | |
+| `GUMROAD_PRODUCT_ID_PROFILE_HALO` | same | New — required before `style5` can verify a key. |
+| `GUMROAD_PRODUCT_ID_PROFILE_VISTA` | same | New — required before `style6` can verify a key. |
 | `GITHUB_TOKEN` | `publish.js`, `sitemap-profiles.xml.js` | Fine-grained token scoped to `apdg21/resumepro-builds` with Contents: Read and write. |
 | `PUBLISH_OWNER_SECRET` | `publish.js` | Any long random string; HMACs the license key into each branch's `.resumepro-owner`. **Never rotate** — changing it orphans every published site. |
 
@@ -133,6 +135,8 @@ wrangler pages secret put GUMROAD_PRODUCT_ID_PROFILE_IDENTITY
 wrangler pages secret put GUMROAD_PRODUCT_ID_PROFILE_EDITORIAL
 wrangler pages secret put GUMROAD_PRODUCT_ID_PROFILE_SPOTLIGHT
 wrangler pages secret put GUMROAD_PRODUCT_ID_PROFILE_QUIET
+wrangler pages secret put GUMROAD_PRODUCT_ID_PROFILE_HALO
+wrangler pages secret put GUMROAD_PRODUCT_ID_PROFILE_VISTA
 ```
 
 `GITHUB_TOKEN` and `PUBLISH_OWNER_SECRET` are already set for the existing

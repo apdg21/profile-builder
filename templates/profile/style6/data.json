@@ -1,0 +1,140 @@
+{
+  "fullName": "Elena Navarro",
+  "headline": "Wedding & editorial photographer",
+  "tagline": "Honest photographs for people who'd rather feel a moment than pose for it.",
+  "profileImage": "assets/profile.jpg",
+  "coverImage": "assets/cover.jpg",
+  "location": "Siargao Island, Philippines · available nationwide",
+  "availability": "Booking 2026–2027 weddings",
+  "businessName": "Navarro Foto",
+  "businessUrl": "",
+  "ctaText": "Check my dates",
+  "ctaUrl": "",
+  "aboutTitle": "About",
+  "aboutText": "I'm Elena, a photographer based on Siargao island.\n\nNine years ago I traded a desk in Manila for a boat schedule and a camera bag. Since then I've shot over a hundred weddings, three resort rebrands, and a growing shelf of magazine work — always chasing the same thing: pictures that look like the day actually felt.\n\nI shoot quietly, direct gently, and deliver fast.",
+  "servicesTitle": "Ways to work together",
+  "servicesIntro": "Collections are fixed and travel-ready — no surprise fees.",
+  "services": [
+    {
+      "title": "Weddings & engagements",
+      "description": "Full-day coverage, two photographers, sneak peeks in 48 hours, and a hand-edited gallery.",
+      "price": "from ₱48,000",
+      "link": ""
+    },
+    {
+      "title": "Editorial & brand shoots",
+      "description": "Resorts, restaurants, and makers — imagery built for menus, websites, and press kits.",
+      "price": "from ₱18,000",
+      "link": ""
+    },
+    {
+      "title": "Prints & albums",
+      "description": "Layflat albums and fine-art prints, color-graded to match the gallery you fell in love with.",
+      "price": "from ₱9,500",
+      "link": ""
+    }
+  ],
+  "workTitle": "Selected work",
+  "work": [
+    {
+      "role": "Cloud 9, sunrise ceremony",
+      "company": "Andrea & Josh",
+      "period": "2025",
+      "description": "A barefoot wedding on the boardwalk — twelve guests, one perfect swell, zero umbrellas."
+    },
+    {
+      "role": "Resort relaunch campaign",
+      "company": "Hayahay Villas",
+      "period": "2025",
+      "description": "Three days of shooting across villas, kitchen, and lagoon for the reopening website and print collateral."
+    },
+    {
+      "role": "Island food story",
+      "company": "Tahanan Table magazine",
+      "period": "2024",
+      "description": "A ten-page feature on Surigao home kitchens, shot entirely on 35mm film."
+    }
+  ],
+  "skillsTitle": "How I shoot",
+  "skills": [
+    {
+      "name": "Natural light"
+    },
+    {
+      "name": "35mm & 120 film"
+    },
+    {
+      "name": "Documentary direction"
+    },
+    {
+      "name": "Color grading"
+    },
+    {
+      "name": "Album design"
+    },
+    {
+      "name": "Drone coverage"
+    }
+  ],
+  "credentialsTitle": "Credentials",
+  "credentials": [
+    {
+      "title": "Featured island weddings portfolio",
+      "issuer": "Bride & Harbor Magazine",
+      "year": "2025"
+    },
+    {
+      "title": "Best in Show, Philippine Photo Awards",
+      "issuer": "FPPF",
+      "year": "2023"
+    }
+  ],
+  "testimonialsTitle": "Kind words",
+  "testimonials": [
+    {
+      "text": "We forgot she was there — then cried at the gallery. Every picture felt like the day itself.",
+      "author": "Andrea & Josh",
+      "role": "Cloud 9, Siargao"
+    },
+    {
+      "text": "The resort has never looked this honest. Bookings went up the month the new photos went live.",
+      "author": "Menchie dela Cruz",
+      "role": "Owner, Hayahay Villas"
+    }
+  ],
+  "faqTitle": "Common questions",
+  "faq": [
+    {
+      "question": "Do you travel for weddings?",
+      "answer": "Happily. Boat and fare are quoted upfront; anywhere in the Philippines, and passports for the right story."
+    },
+    {
+      "question": "How fast is delivery?",
+      "answer": "48-hour sneak peeks, full gallery in four weeks, albums eight weeks after design approval."
+    }
+  ],
+  "contactTitle": "Check your date",
+  "contactIntro": "Tell me your date and place — I'll answer with availability and two sample galleries within a day.",
+  "email": "hello@navarrofoto.ph",
+  "phone": "+63 917 555 0182",
+  "messengerUsername": "navarrofoto",
+  "messengerNote": "Opens Messenger with your message ready to send.",
+  "bookingUrl": "https://cal.com/elenanavarro/20min",
+  "bookingLabel": "Book a 20-minute date check",
+  "socialLinks": [
+    {
+      "platform": "Instagram",
+      "url": "https://instagram.com/navarrofoto"
+    },
+    {
+      "platform": "Facebook",
+      "url": "https://facebook.com/navarrofoto"
+    },
+    {
+      "platform": "YouTube",
+      "url": "https://youtube.com/@navarrofoto"
+    }
+  ],
+  "copyright": "© 2026 Navarro Foto",
+  "rpTemplate": "style6"
+}
